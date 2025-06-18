@@ -1,12 +1,11 @@
 // cambiar el nombre de los recursos y herramientas
 // File: app/_meta.js
+
 // This file is used to define metadata for the Nextra   documentation site.
 export default {
-    resources:"Resources 🎃", 
-    tools:"Tools 🛠️",
+    intro: "Introducción ",
     "###":{
         type:"separator",
-    },
-    docker:"Docker 🐳",
-
+    }
+    
 }

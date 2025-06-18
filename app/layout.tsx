@@ -2,6 +2,7 @@ import { Footer, Layout, Navbar } from 'nextra-theme-docs'
 import { Banner, Head, Search } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
+import Image from 'next/image'
  
 export const metadata = {
   // Define your metadata here
@@ -13,15 +14,14 @@ export const metadata = {
 const banner = <Banner storageKey="some-key">My project 1.0.0 is released 🎉</Banner>
 const navbar = (
   <Navbar
-    logo={<b>My project</b>}
+    logo={<Image src="/IPSMultisalud.bin" alt="Logo" width={130} height={130} />}
     logoLink={"https://github.com/MiguelMorales1125/Project-proof"}
     projectLink="https://github.com/MiguelMorales1125/Project-proof"
-    chatLink="https://discord.gg"
   />
 )
-const footer = <Footer>MIT {new Date().getFullYear()} © My project.</Footer>
+const footer = <Footer>MIT {new Date().getFullYear()} © IPSMultisalud.</Footer>
 
-const search = <Search placeholder="Search My project..."></Search>
+const search = <Search placeholder="Buscar documentación"></Search>
 
 import { ReactNode } from 'react'
 
