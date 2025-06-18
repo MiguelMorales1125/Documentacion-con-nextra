@@ -1,6 +1,6 @@
 // Después
 const myObject = {
-    paso1: "Creacion de admin y empresa",
-    paso2: "Creacion de sedes",
+    paso1: "admin y empresa",
+    paso2: "sedes",
 };
 export default myObject;

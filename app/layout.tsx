@@ -14,7 +14,7 @@ export const metadata = {
 const banner = <Banner storageKey="some-key">My project 1.0.0 is released 🎉</Banner>
 const navbar = (
   <Navbar
-    logo={<Image src="/IPSMultisalud.bin" alt="Logo" width={130} height={130} />}
+    logo={<Image src="/IPSMultisalud.jpg" alt="Logo" width={130} height={130} />}
     logoLink={"https://github.com/MiguelMorales1125/Project-proof"}
     projectLink="https://github.com/MiguelMorales1125/Project-proof"
   />
