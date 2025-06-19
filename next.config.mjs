@@ -11,8 +11,8 @@ export default withNextra({
   async redirects() {
     return [
       {
-        source: "/",
-        destination: "/intro",
+        source: "/intro",
+        destination: "/inicio/intro",
         permanent: true,
       },
     ];

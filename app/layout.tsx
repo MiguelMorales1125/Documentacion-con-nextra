@@ -11,11 +11,12 @@ export const metadata = {
   description: 'Documentation for the project ...',
 }
  
-const banner = <Banner storageKey="some-key">Bienvenido a la documentación🎉</Banner>
+const banner = <Banner storageKey="some-key">Bienvenido a la documentación de IPSmultisalud🎉</Banner>
 const navbar = (
   <Navbar
-    logo={<Image src="/IPSMultisalud.jpg" alt="Logo" width={130} height={130} />}
+    logo={<Image src="/IPSMultisalud.png" alt="Logo" width={130} height={130} />}
     logoLink={"https://github.com/MiguelMorales1125/Project-proof"}
+    
     projectLink="https://github.com/MiguelMorales1125/Project-proof"
   />
 )
