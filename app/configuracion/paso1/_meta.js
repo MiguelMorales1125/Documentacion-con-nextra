@@ -1,7 +1,7 @@
 
 const myObject = {
-    creacionSuperAdmin: "Creacion de admin",
-    creacionEmpresa: "Creacion de empresa",
-    asignarAdmin: "Asignacion de empresa a un admin",
+    creacionSuperAdmin: "Creación de admin",
+    creacionEmpresa: "Creación de empresa",
+    asignarAdmin: "Asignación de empresa a un admin",
 };
 export default myObject;

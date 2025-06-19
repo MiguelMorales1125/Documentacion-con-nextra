@@ -11,7 +11,7 @@ export const metadata = {
   description: 'Documentation for the project ...',
 }
  
-const banner = <Banner storageKey="some-key">My project 1.0.0 is released 🎉</Banner>
+const banner = <Banner storageKey="some-key">Bienvenido a la documentación🎉</Banner>
 const navbar = (
   <Navbar
     logo={<Image src="/IPSMultisalud.jpg" alt="Logo" width={130} height={130} />}

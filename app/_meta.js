@@ -6,6 +6,7 @@ export default {
     intro: "Introducción ",
     "###":{
         type:"separator",
-    }
-    
+    },
+    configuracion: "Configuración ",
+    moduloAdministrador: "Módulo Administrador ",
 }
