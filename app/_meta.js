@@ -1,8 +1,9 @@
 // cambiar el nombre de los recursos y herramientas
 // File: app/_meta.js
 // This file is used to define metadata for the Nextra   documentation site.
-export default {
-  inicio:{
+
+const myObject = {
+  inicio: {
     title: "Introducción",
     type: "page",
   },
@@ -10,7 +11,7 @@ export default {
     title: "Módulo Administrador",
     type: "page",
   },
-  moduloGestionCitas:{
+  moduloGestionCitas: {
     title: "Módulo Gestión de Citas",
     type: "page",
   },
@@ -21,5 +22,6 @@ export default {
   moduloHistoriasClinicas: {
     title: "Módulo Historias Clínicas",
     type: "page",
-  }
+  },
 };
+export default myObject;

@@ -1,1 +1,196 @@
 # Sedes 
+
+Las sedes se refieren a las ubicaciones físicas donde se encuentran las instalaciones médicas, como consultorios, clínicas u hospitales. Cada sede puede tener su propia dirección, información de contacto. **La información tratada en esta opción será compartida entre los módulos de citas, administrador y digiturno.**
+
+## Ingreso a la opción
+
+1.  Para acceder, primero debe ingresar a la opción de configuración desde el menú principal del módulo de citas.
+2.  Una vez en la configuración, se desplegará un submenú donde encontrará la opción específica "Sedes". Al seleccionar esta opción, podrá gestionar y administrar las sedes donde se atenderá a los usuarios.
+<br />
+<div style={{ maxWidth: '800px', margin: '0 auto' }}>
+  <img
+    src="/configSedes.webp"
+    alt="configuración de sedes"
+    style={{ width: '100%', borderRadius: '8px' }}
+  />
+</div>
+
+## Crear sede
+
+Dentro de la opción de "Sedes", se encuentra disponible un botón con el texto "Nueva sede". 
+
+(foto del botón nueva sede)
+
+Al hacer clic en este botón, se abrirá el siguiente formulario que permite la entrada de datos para la creación de una nueva sede:
+
+- **Código (Campo único y obligatorio):** Este campo requiere un código único para identificar de manera exclusiva la nueva sede dentro del sistema.
+- **Descripción:** En este campo, se debe proporcionar una descripción concisa pero completa del grupo de servicio. Esta descripción ayudará a contextualizar y comprender mejor la función y el propósito del grupo de servicio dentro del sistema.
+- **Nombre (Obligatorio):** Aquí se debe ingresar el nombre de la sede, proporcionando una identificación clara y descriptiva.
+- **Dirección (Obligatoria):** Este campo requiere la dirección física de la sede.
+- **Barrio (Obligatorio):** Se debe especificar el barrio donde está ubicada la sede.
+- **Municipio (Campo de búsqueda, obligatorio):** Permite buscar y seleccionar el municipio al que pertenece la sede, asegurando una asignación correcta.
+- **Zona (Campo de selección, obligatorio):** Este campo ofrece la opción de seleccionar entre "Rural" o "Urbano", clasificando la ubicación de la sede.
+- **Teléfono (Obligatorio):** Se debe ingresar el número de teléfono de contacto de la sede.
+- **Correo Electrónico (Campo obligatorio):** En este campo, se debe proporcionar la dirección de correo electrónico de la sede.
+- **Gerente (Obligatorio):** Aquí se debe ingresar el nombre del gerente encargado de la sede.
+- **Permitir pacientes no registrados (Funcionalidad para digiturno, Switch):** para controlar si los pacientes que no estén registrados en las aseguradoras asociadas a la sede puedan ser atendidos.
+- **Hora inicio (Campo con formato de hora):** Será la hora a partir de la cual se empezará a dar servicio al usuario.
+- **Hora final (Campo con formato de hora):** Será la hora a partir de la cual se terminará la atención de usuarios.
+- **Límite de turnos (Campo numérico):** Cantidad máxima diaria de turnos que podrá tener un paciente registrado, si este campo es cero (0), los usuarios no tendrán limitaciones en el número de turnos.
+
+<div style={{ maxWidth: '500px', margin: '0 auto' }}>
+  <img
+    src="/formularioNuevaSede.webp"
+    alt="formulario para ingresar la información de la nueva sede"
+    style={{ width: '100%', borderRadius: '8px' }}
+  />
+</div>
+
+La pestaña de servicios es inaccesible al momento de crear la sede, una vez creada deberá acceder a la edición de este registro para poder agregarlos.
+
+## Buscar sedes
+
+El campo de búsqueda permite listar sedes a partir de un código, nombre, teléfono o correo.
+<br />
+
+<div style={{ maxWidth: '800px', margin: '0 auto' }}>
+  <img
+    src="/buscarSede.webp"
+    alt="búsqueda de sedes"
+    style={{ width: '100%', borderRadius: '8px' }}
+  />
+</div>
+
+### Filtros
+Además, se pueden aplicar los siguientes filtros:
+
+1. Filtro por **Estado**: permite filtrar por ***Todos***, ***Activos*** o ***Inactivos***.
+
+<div style={{ maxWidth: '800px', margin: '0 auto' }}>
+  <img
+    src="/sedeFiltroEstado.webp"
+    alt="filtro de sede por estado"
+    style={{ width: '100%', borderRadius: '8px' }}
+  />
+</div>
+
+2. Filtro **Ordenar por**: permite filtrar por antigüedad.
+
+<div style={{ maxWidth: '800px', margin: '0 auto' }}>
+  <img
+    src="/sedeFiltroOrdenar.webp"
+    alt="filtro de sede por orden de antigüedad"
+    style={{ width: '100%', borderRadius: '8px' }}
+  />
+</div>
+
+Los resultados de la búsqueda se mostrarán en la tabla principal de la opción, facilitando la visualización y gestión de los diferentes operadores:
+<br />
+<div style={{ maxWidth: '800px', margin: '0 auto' }}>
+  <img
+    src="/resultadoBusquedaSedes.webp"
+    alt="Resultados de las búsquedas en sedes"
+    style={{ width: '100%', borderRadius: '8px' }}
+  />    
+</div>
+
+## Editar sede
+Una vez localizada la sede deseada en la tabla de resultados, se encontrará un botón ubicado en el extremo izquierdo de la fila correspondiente.
+<br />
+<div style={{ maxWidth: '800px', margin: '0 auto' }}>
+  <img
+    src="/editarSede.webp"
+    alt="Botón para editar sedes"
+    style={{ width: '100%', borderRadius: '8px' }}
+  />    
+</div>
+
+Al hacer clic en este botón, se abrirá un formulario que mostrará la información detallada del registro seleccionado, permitiendo al usuario editar su información.
+### Pestaña "Datos Básicos"
+
+Dentro de la edición de la sede, se puede acceder a la pestaña "Datos básicos". En esta ventana, se encuentra la información de la sede.
+<br />
+<div style={{ maxWidth: '500px', margin: '0 auto' }}>
+  <img
+    src="/formularioEditarSede.webp"
+    alt="formulario para editar la información de la sede"
+    style={{ width: '100%', borderRadius: '8px' }}
+  />    
+</div>
+
+### Pestaña "servicios"
+Dentro de la edición de la sede, se puede acceder a la pestaña "Servicios". En esta ventana, se encuentra un campo de búsqueda que permite buscar servicios por código o descripción. Esta pestaña solo está disponible en el módulo de citas.
+*   Al ingresar un término de búsqueda en el campo proporcionado, el sistema filtra automáticamente los servicios disponibles en función del código o la descripción: [¿Cómo crear un servicio?](/moduloGestionCitas)
+<br /> 
+<div style={{ maxWidth: '500px', margin: '0 auto' }}>
+  <img
+    src="/editarSedeServicios.webp"
+    alt="Apartado para editar los servicios de la sede"
+    style={{ width: '100%', borderRadius: '8px' }}
+  />    
+</div>
+
+* Luego, se pueden agregar los servicios que se prestarán en la nueva sede seleccionando los resultados de la búsqueda para añadirlos. (Cada servicio agregado tiene la opción de ser **eliminado** de la lista)
+<br /> 
+<div style={{ maxWidth: '500px', margin: '0 auto' }}>
+  <img
+    src="/editarSedeServicioSeleccionado.webp"
+    alt="Resultado de la selección de servicios"
+    style={{ width: '100%', borderRadius: '8px' }}
+  />    
+</div>
+
+### Pestaña "Aseguradoras"
+Dentro de la edición de la sede también podemos agregar o eliminar las aseguradoras para la atención de los usuarios afiliados a estas. [¿Cómo crear una Aseguradora?](/moduloGestionCitas)
+<br /> 
+<div style={{ maxWidth: '500px', margin: '0 auto' }}>
+  <img
+    src="/editarSedeAseguradoras.webp"
+    alt="Apartado para editar las aseguradoras de la sede"
+    style={{ width: '100%', borderRadius: '8px' }}
+  />    
+</div>
+
+* En el campo aseguradora podemos filtrar estas para poder agregarlas. 
+<br /> 
+<div style={{ maxWidth: '500px', margin: '0 auto' }}>
+  <img
+    src="/editarSedeAsignarAseguradora.webp"
+    alt="Asignación de una aseguradora"
+    style={{ width: '100%', borderRadius: '8px' }}
+  />    
+</div>
+
+* Una vez agregada una aseguradora quedará listada en la tabla, donde tendrá la opción de eliminarla de la lista.
+<br /> 
+<div style={{ maxWidth: '500px', margin: '0 auto' }}>
+  <img
+    src="/aseguradoraAsignadaSede.webp"
+    alt="Aseguradora asignada con opción de ser eliminada"
+    style={{ width: '100%', borderRadius: '8px' }}
+  />    
+</div>
+
+## Cambiar estado de sede
+
+En la fila correspondiente a la sede encontrada, se ubicará un interruptor (switch) al final de la misma. Este interruptor permite cambiar el estado del registro seleccionado, donde la posición de la derecha indica el estado activo.
+
+**Activo:**
+<br />
+<div style={{ maxWidth: '800px', margin: '0 auto' }}>
+  <img
+    src="/sedeActiva.webp"
+    alt="Interruptor de sede activo"
+    style={{ width: '100%', borderRadius: '8px' }}
+  />    
+</div>
+
+**Inactivo:**
+<br />
+<div style={{ maxWidth: '800px', margin: '0 auto' }}>
+  <img
+    src="/sedeInactiva.webp"
+    alt="Interruptor de sede inactivo"
+    style={{ width: '100%', borderRadius: '8px' }}
+  />    
+</div>
