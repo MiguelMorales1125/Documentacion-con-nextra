@@ -1,3 +1,8 @@
+
+import Image from "next/image";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+
 # Empresas
 
 En esta opción se podrá configurar a detalle cada empresa que haga parte del grupo empresarial.
@@ -5,24 +10,32 @@ En esta opción se podrá configurar a detalle cada empresa que haga parte del g
 ## Ingreso a la opción 
 Para acceder, debes ingresar a la opción de “Empresas”:
 <br />
-<div style={{ maxWidth: '800px', margin: '0 auto' }}>
-  <img
-    src="/empresas.webp"
-    alt="Apartado empresas"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/empresas.webp"
+      alt="Apartado empresas"
+      width={800}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 ## Crear empresa
 
 Dentro de la opción de **Empresas**, se encuentra disponible un botón con el texto **Nueva empresa**. 
 <br />
-<div style={{ maxWidth: '800px', margin: '0 auto' }}>
-  <img
-    src="/nuevaEmpresa.webp"
-    alt="Nueva empresa"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/nuevaEmpresa.webp"
+      alt="Nueva empresa"
+      width={800}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 Al hacer clic en este botón, se abrirá el siguiente **formulario** que permite la entrada de datos para la creación de una nueva empresa:
@@ -46,24 +59,33 @@ Al hacer clic en este botón, se abrirá el siguiente **formulario** que permite
 - **Logo(Obligatorio):** URL tipo http en el cual esta alojado el logo que usara cada empresa.
 
 <br />
-<div style={{ maxWidth: '600px', margin: '0 auto' }}>
-  <img
-    src="/formularioEmpresaVacio.webp"
-    alt="Formulario Empresa"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/formularioEmpresaVacio.webp"
+      alt="Formulario Empresa"
+      width={600}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 ## Buscar empresa
 
 El campo de búsqueda permite listar empresas a partir de un **nombre**, **dirección**, **teléfono** o **correo** que se digite:
+
 <br />
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/buscarEmpresa.webp"
-    alt="Buscar empresa"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/buscarEmpresa.webp"
+      alt="Buscar empresa"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 ### Filtros
@@ -71,54 +93,74 @@ Además, se pueden aplicar los siguientes filtros:
 
 1. Filtro por **estado**: permite filtrar por Todos, Activos o Inactivos.
 
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/filtroEstado.webp"
-    alt="Filtro por estado"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/filtroEstado.webp"
+      alt="Filtro por estado"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 2. Filtro **Ordenar por**: Permite filtrar por antiguedad.
 
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/filtroOrdenar.webp"
-    alt="Filtro ordenar por"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/filtroOrdenar.webp"
+      alt="Filtro ordenar por"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 Los resultados de la búsqueda se mostrarán en la tabla principal de la opción, facilitando la visualización y gestión de las diferentes empresas:
 <br />
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/resultadoFiltro.webp"
-    alt="Resultados del filtro"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/resultadoFiltro.webp"
+      alt="Resultados del filtro"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 ## Editar empresa 
 
 Una vez localizada la empresa deseada en la tabla de resultados, se encontrará un botón ubicado en el extremo derecho de la fila correspondiente.
 <br />
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/editarEmpresa.webp"
-    alt="Botón editar empresa"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/editarEmpresa.webp"
+      alt="Botón editar empresa"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 Al hacer clic en este botón, se abrirá un formulario que mostrará la información detallada del registro seleccionado, permitiendo al usuario editar su información.
 <br />
-<div style={{ maxWidth: '600px', margin: '0 auto' }}>
-  <img
-    src="/formularioEditarEmpresa.webp"
-    alt="Formulario para editar empresa"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/formularioEditarEmpresa.webp"
+      alt="Formulario para editar empresa"
+      width={600}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 ## Cambiar estado de una empresa
@@ -127,20 +169,28 @@ En la fila correspondiente a la empresa encontrada, se ubicará un **interruptor
 
 **Activo:**
 <br />
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/empresaActiva.webp"
-    alt="Interruptor de empresa activa"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/empresaActiva.webp"
+      alt="Interruptor de empresa activa"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 **Inactivo:**
 <br />
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/empresaInactiva.webp"
-    alt="Interruptor de empresa inactiva"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/empresaInactiva.webp"
+      alt="Interruptor de empresa inactiva"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>

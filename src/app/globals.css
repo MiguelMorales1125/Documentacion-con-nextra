@@ -24,3 +24,22 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.image-zoom-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.image-zoom-wrapper > span {
+  display: inline-block;
+}
+
+.image-zoom-wrapper img {
+  border-radius: 8px !important; /* usa !important para sobreescribir posibles estilos */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  cursor: zoom-in !important;
+  display: block !important;
+  transition: box-shadow 0.3s ease;
+}
+

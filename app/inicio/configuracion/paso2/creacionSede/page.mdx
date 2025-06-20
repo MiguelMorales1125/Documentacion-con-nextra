@@ -1,11 +1,45 @@
+import Image from 'next/image'
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
+
 # Creación de sedes
 
 - Para continuar con la configuración asignaremos una sede de la empresa cliente al operador super admin. En el menú principal a la izquierda de la pantalla se encuentra el botón “Sedes” para ingresar a esta opción.
 
-![boton sedes](/botonSedes.webp)
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/botonSedes.webp"
+      alt="boton sedes"
+      width={800}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
+</div>
 
 - En la parte superior derecha de la pantalla estará ubicado el botón “Nueva sede” el cual desplegará un formulario el cual tendrá todos los campos necesarios para la correcta creación de una sede.
 
-![boton nueva sede](/botonNuevaSede.webp)
-
-![formulario nueva sede](/formularioSede.webp)
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/botonNuevaSede.webp"
+      alt="boton nueva sede"
+      width={800}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
+</div>
+<br />
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/formularioSede.webp"
+      alt="formulario nueva sede"
+      width={800}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
+</div>

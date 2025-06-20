@@ -1,3 +1,7 @@
+import Image from 'next/image'
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
+
 # Operadores
 
 En esta opción se podrá configurar a detalle cada operador que haga parte del grupo empresarial.
@@ -6,24 +10,32 @@ En esta opción se podrá configurar a detalle cada operador que haga parte del 
 
 Para acceder, debes ingresar a la opción de “Operadores”:
 <br />
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/opcionOperadores.webp"
-    alt="Opción operadores"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/opcionOperadores.webp"
+      alt="Opción operadores"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 ## Crear operador   
 
 Dentro de la opción de "Operador", se encuentra disponible un botón con el texto "Nuevo operador". 
 <br />
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/nuevoOperador.webp"
-    alt="Nuevo operador"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/nuevoOperador.webp"
+      alt="Nuevo operador"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 Al hacer clic en este botón, se abrirá el siguiente formulario que permite la entrada de datos para la creación de un nuevo operador:
@@ -42,24 +54,32 @@ Al hacer clic en este botón, se abrirá el siguiente formulario que permite la 
 - **Sede (Campo de búsqueda, obligatorio).**
 
 <br />
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/formularioOperador.webp"
-    alt="Formulario operador"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/formularioOperador.webp"
+      alt="Formulario operador"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 ## Buscar operador
 
 Dentro de la opción, el campo de búsqueda permite listar operadores  a partir de un nombre, teléfono o correo que se digite:
 <br />
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/buscarOperador.webp"
-    alt="Buscar operador"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/buscarOperador.webp"
+      alt="Buscar operador"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 ### Filtros
@@ -67,54 +87,74 @@ Además, se pueden aplicar los siguientes filtros:
 
 1. Filtro por **Estado**: permite filtrar por ***Todos***, ***Activos*** o ***Inactivos***.
 
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/filtrarOperadorEstado.webp"
-    alt="Filtrar operador por estado"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/filtrarOperadorEstado.webp"
+      alt="Filtrar operador por estado"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 2. Filtro **Ordenar por**: permite filtrar por antigüedad.
 
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/ordenarPorAntiguedad.webp"
-    alt="Filtrar operador por orden de antigüedad"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/ordenarPorAntiguedad.webp"
+      alt="Filtrar operador por orden de antigüedad"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 Los resultados de la búsqueda se mostrarán en la tabla principal de la opción, facilitando la visualización y gestión de los diferentes operadores:
 <br />
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/resultadoBusquedaOperador.webp"
-    alt="Resultado de las búsquedas"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/resultadoBusquedaOperador.webp"
+      alt="Resultado de las búsquedas"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 ## Editar operador
 
 Una vez localizado el operador en la tabla de resultados, se encontrará un botón ubicado en el extremo derecho de la fila correspondiente.
 <br />
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/editarOperador.webp"
-    alt="Botón para editar la información de los operadores"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/editarOperador.webp"
+      alt="Botón para editar la información de los operadores"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 Al hacer clic en este botón, se abrirá un formulario que mostrará la información detallada del registro seleccionado, permitiendo al usuario editar su información.
 <br />
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/formularioEditarOperador.webp"
-    alt="Formulario editar la información de los operadores"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/formularioEditarOperador.webp"
+      alt="Formulario editar la información de los operadores"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 ## Asignar permisos 
@@ -124,34 +164,46 @@ En el formulario de edición en la pestaña “Permisos”, se gestionan los per
 * [crear permisos](/moduloAdministrador/seguridad/permisos): en este link podrá aprender a crear permisos.
 
 <br />
-<div style={{ maxWidth: '500px', margin: '0 auto' }}>
-  <img
-    src="/buscarPermisos.webp"
-    alt="Buscar permisos por descripción"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/buscarPermisos.webp"
+      alt="Buscar permisos por descripción"
+      width={500}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 ### Búsqueda
 En este campo podrá buscar por descripción los permisos que desee asignar al operador, una vez desplegados los resultados selecciona el permiso y el sistema lo asigna automáticamente:
 <br />
-<div style={{ maxWidth: '500px', margin: '0 auto' }}>
-  <img
-    src="/seleccionPermisos.webp"
-    alt="Selección de permisos que va a tener el operador"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/seleccionPermisos.webp"
+      alt="Selección de permisos que va a tener el operador"
+      width={500}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 ### Gestión
 En la parte inferior el sistema lista todos los permisos que el operador tiene asignados, en donde podrá, según la necesidad, eliminar algún permiso:
 <br />
-<div style={{ maxWidth: '500px', margin: '0 auto' }}>
-  <img
-    src="/eliminarPermiso.webp"
-    alt="Eliminar permisos del operador"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/eliminarPermiso.webp"
+      alt="Eliminar permisos del operador"
+      width={500}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 ## Cambiar estado de un operador
@@ -160,20 +212,28 @@ En la fila correspondiente al operador encontrado, se ubicará un interruptor (s
 
 **Activo:**
 <br />
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/operadorActivo.webp"
-    alt="Interruptor de operador activo"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/operadorActivo.webp"
+      alt="Interruptor de operador activo"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
 
 **Inactivo:**
 <br />
-<div style={{ maxWidth: '700px', margin: '0 auto' }}>
-  <img
-    src="/operadorInactivo.webp"
-    alt="Interruptor de operador inactivo"
-    style={{ width: '100%', borderRadius: '8px' }}
-  />    
+<div className="image-zoom-wrapper">
+  <Zoom>
+    <Image
+      src="/operadorInactivo.webp"
+      alt="Interruptor de operador inactivo"
+      width={700}
+      height={300}
+      unoptimized
+    />
+  </Zoom>
 </div>
