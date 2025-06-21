@@ -1,0 +1,150 @@
+import { ImageZoom } from 'nextra/components'
+
+# Permisos
+
+En esta opción se podrá configurar a detalle cada permiso que hace parte de la aplicación.
+
+## Ingreso a la opción 
+Para acceder, debes ingresar al submenú “Seguridad”, luego la opción "Permisos".
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/permisos.webp"
+    alt="Apartado permisos"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Crear permiso
+
+Dentro de la opción de **Permisos**, se encuentra disponible un botón con el texto **Nuevo permiso**. 
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/nuevoPermiso.webp"
+    alt="Nuevo permiso"
+    width={800}
+    height={200}
+  />
+</div>
+
+Al hacer clic en este botón, se abrirá el siguiente formulario que permite la entrada de datos para la creación de un nuevo permiso:
+
+- **Módulo (Campo de selección, Obligatorio):** Contará con las siguientes opciones:
+    * Administrador
+    * Citas
+    * Digiturno
+    * Historias clínicas
+
+- **Acción(Campo de búsqueda, Obligatorio):** Digite el nombre o iniciales del turno que desea crear, una vez listada la búsqueda seleccione el que desee.
+- **Descripción(Obligatorio).**
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioPermiso.webp"
+    alt="Formulario permiso"
+    width={700}
+    height={300}
+  />
+</div>
+
+## Buscar permiso
+
+Dentro de la opción, el campo de búsqueda permite listar permisos a partir de una descripción:  
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/buscarPermiso.webp"
+    alt="Buscar permiso"
+    width={700}
+    height={300}
+  />
+</div>
+
+### Filtros
+Además, se pueden aplicar los siguientes filtros:
+
+1. Filtro por **estado**: permite filtrar por Todos, Activos o Inactivos.
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroEstadoPermisos.webp"
+    alt="Filtro por estado"
+    width={700}
+    height={300}
+  />
+</div>
+
+2. Filtro **Ordenar por**: Permite filtrar por antigüedad, con opciones de "más reciente" o "más antiguo".
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroOrdenarPermisos.webp"
+    alt="Filtro ordenar por"
+    width={700}
+    height={300}
+  />
+</div>
+
+Los resultados de la búsqueda se mostrarán en la tabla principal de la opción, facilitando la visualización y gestión de los diferentes permisos:
+<br/>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/resultadoFiltroPermiso.webp"
+    alt="Resultados del filtro"
+    width={700}
+    height={300}
+  />
+</div>
+
+## Editar permiso 
+
+Una vez localizado el **permiso** en la tabla de resultados, se encontrará un botón ubicado en el extremo derecho de la fila correspondiente.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/editarPermiso.webp"
+    alt="Botón editar permiso"
+    width={700}
+    height={300}
+  />
+</div>
+
+Al hacer clic en este botón, se abrirá un formulario que mostrará la información detallada del registro seleccionado, permitiendo al usuario editar su información.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioEditarPermiso.webp"
+    alt="Formulario para editar permisos"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Cambiar estado de un permiso
+
+En la fila correspondiente al permiso encontrado, se ubicará un interruptor (switch) al final de la misma. Este interruptor permite cambiar el estado del registro seleccionado, donde la posición de la derecha indica el estado activo y el izquierdo inactivo:
+**Activo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/permisoActivo.webp"
+    alt="Interruptor de permiso activo"
+    width={800}
+    height={300}
+  />
+</div>
+
+**Inactivo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/permisoInactivo.webp"
+    alt="Interruptor de permiso inactivo"
+    width={800}
+    height={300}
+  />
+</div>

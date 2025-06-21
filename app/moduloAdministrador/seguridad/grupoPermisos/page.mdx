@@ -1,0 +1,177 @@
+import { ImageZoom } from 'nextra/components'
+
+# Grupos de Permisos
+
+En esta opción se podrá crear bloques de permisos para ser agregados en grupo a un operador.
+
+## Ingreso a la opción 
+Para acceder, debe ingresar al submenú “Seguridad”, este desplegará varias opciones, entre estas “Grupos de permisos”.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/gruposPermisos.webp"
+    alt="Apartado Grupo de Permisos"
+    width={800}
+    height={300}
+  />    
+</div>
+
+## Crear grupo de permisos
+
+Dentro de la opción de **Grupos de permisos**, se encuentra disponible un botón con el texto **Nuevo grupo de permisos**. 
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/nuevoGrupoPermisos.webp"
+    alt="Nuevo Grupo de Permisos"
+    width={800}
+    height={200}
+  />
+</div>
+
+Al hacer clic en este botón, se abrirá el siguiente formulario que permite la entrada de datos para la creación de un nuevo grupo de permisos:
+
+- **Nombre (Campo de texto, obligatorio):** En este campo puede asignar un nombre a su nuevo grupo de permisos.
+- **Descripción (Campo de texto, obligatorio):** En este campo podrá explicar detalladamente qué funcionalidades serán restringidas por los permisos de este grupo.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioGrupoPermisos.webp"
+    alt="Formulario Grupo de Permisos"
+    width={700}
+    height={300}
+  />
+</div>
+La pestaña permisos será inaccesible en la creación, solo desde la edición podrá agregarlos al grupo.
+
+
+## Buscar grupo de permisos
+
+Dentro de la opción, el campo de búsqueda permite listar grupos de permisos a partir del nombre o la descripción:
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/buscarGrupoPermisos.webp"
+    alt="Buscar grupo de permisos"
+    width={800}
+    height={300}
+  />
+</div>
+
+### Filtros
+Además, se pueden aplicar los siguientes filtros:
+
+1. Filtro por **estado**: permite filtrar por Todos, Activos o Inactivos.
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroEstadoGrupoPermisos.webp"
+    alt="Filtro por estado"
+    width={800}
+    height={300}
+  />
+</div>
+
+2. Filtro **Ordenar por**: Permite filtrar por antigüedad, con opciones de "más reciente" o "más antiguo".
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroOrdenarGrupoPermisos.webp"
+    alt="Filtro ordenar por"
+    width={800}
+    height={300}
+  />
+</div>
+
+Los resultados de la búsqueda se mostrarán en la tabla principal de la opción, facilitando la visualización y gestión de los diferentes grupos de permisos:
+<br/>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/resultadoFiltroGrupoPermisos.webp"
+    alt="Resultados del filtro o búsqueda"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Editar Grupo de Permisos 
+
+Una vez localizado el **grupo de permisos** en la tabla de resultados, se encontrará un botón ubicado en el extremo derecho de la fila correspondiente.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/editarGrupoPermisos.webp"
+    alt="Botón editar grupo de permisos"
+    width={800}
+    height={300}
+  />
+</div>
+
+Al hacer clic en este botón, se abrirá un formulario que mostrará la información detallada del registro seleccionado, permitiendo al usuario editar su información.
+
+### Pestaña "Datos Básicos"
+
+Dentro de la edición del grupo de permisos, se puede acceder a la pestaña "Datos básicos". En esta ventana, se encuentra la información del grupo de permisos.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioEditarGrupoPermisos.webp"
+    alt="Formulario para editar el grupo de permisos"
+    width={700}
+    height={300}
+  />
+</div>
+
+### Pestaña "Permisos"
+Dentro de la edición del grupo de permisos, se puede acceder a la pestaña "Permisos". En esta ventana, podrá filtrar permisos para agregarlos al grupo o eliminarlos de la lista de permisos ya asignados.
+* En esta podrá filtrar permisos para agregarlos al grupo o eliminarlos de la lista de permisos ya asignados.
+
+[¿Cómo crear un permiso?](/moduloAdministrador/seguridad/permisos)
+<br /> 
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/editarPermisos.webp"
+    alt="Apartado para editar los permisos del grupo de permisos"
+    width={700}
+    height={300}
+  />
+</div>
+
+* Luego, se pueden agregar los permisos que se le asignarán al grupo de permisos. (Cada permiso agregado tiene la opción de ser **eliminado** de la lista)
+<br /> 
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/permisoSeleccionado.webp"
+    alt="Resultado de la selección de permisos"
+    width={700}
+    height={300}
+  />
+</div>
+
+## Cambiar estado de un grupo de permisos
+
+En la fila correspondiente al grupo de permisos encontrado, se ubicará un interruptor (switch) al final de la misma. Este interruptor permite cambiar el estado del registro seleccionado, donde la posición de la derecha indica el estado activo y el izquierdo inactivo:
+
+**Activo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/grupoPermisosActivo.webp"
+    alt="Interruptor de grupo de permisos activo"
+    width={800}
+    height={300}
+  />
+</div>
+
+**Inactivo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/grupoPermisosInactivo.webp"
+    alt="Interruptor de grupo de permisos inactivo"
+    width={800}
+    height={300}
+  />
+</div>
