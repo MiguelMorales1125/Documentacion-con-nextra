@@ -1,6 +1,4 @@
-import Image from 'next/image'
-import Zoom from 'react-medium-image-zoom'
-import 'react-medium-image-zoom/dist/styles.css'
+import { ImageZoom } from 'nextra/components'
 
 # Operadores
 
@@ -10,32 +8,26 @@ En esta opción se podrá configurar a detalle cada operador que haga parte del 
 
 Para acceder, debes ingresar a la opción de “Operadores”:
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/opcionOperadores.webp"
-      alt="Opción operadores"
-      width={700}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/opcionOperadores.webp"
+    alt="Opción operadores"
+    width={800}
+    height={300}
+  />
 </div>
 
 ## Crear operador   
 
 Dentro de la opción de "Operador", se encuentra disponible un botón con el texto "Nuevo operador". 
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/nuevoOperador.webp"
-      alt="Nuevo operador"
-      width={700}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/nuevoOperador.webp"
+    alt="Nuevo operador"
+    width={800}
+    height={300}
+  />
 </div>
 
 Al hacer clic en este botón, se abrirá el siguiente formulario que permite la entrada de datos para la creación de un nuevo operador:
@@ -54,32 +46,26 @@ Al hacer clic en este botón, se abrirá el siguiente formulario que permite la 
 - **Sede (Campo de búsqueda, obligatorio).**
 
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/formularioOperador.webp"
-      alt="Formulario operador"
-      width={700}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioOperador.webp"
+    alt="Formulario operador"
+    width={800}
+    height={300}
+  />
 </div>
 
 ## Buscar operador
 
 Dentro de la opción, el campo de búsqueda permite listar operadores  a partir de un nombre, teléfono o correo que se digite:
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/buscarOperador.webp"
-      alt="Buscar operador"
-      width={700}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/buscarOperador.webp"
+    alt="Buscar operador"
+    width={800}
+    height={300}
+  />
 </div>
 
 ### Filtros
@@ -87,74 +73,59 @@ Además, se pueden aplicar los siguientes filtros:
 
 1. Filtro por **Estado**: permite filtrar por ***Todos***, ***Activos*** o ***Inactivos***.
 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/filtrarOperadorEstado.webp"
-      alt="Filtrar operador por estado"
-      width={700}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtrarOperadorEstado.webp"
+    alt="Filtrar operador por estado"
+    width={800}
+    height={300}
+  />
 </div>
 
 2. Filtro **Ordenar por**: permite filtrar por antigüedad.
 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/ordenarPorAntiguedad.webp"
-      alt="Filtrar operador por orden de antigüedad"
-      width={700}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/ordenarPorAntiguedad.webp"
+    alt="Filtrar operador por orden de antigüedad"
+    width={800}
+    height={300}
+  />
 </div>
 
 Los resultados de la búsqueda se mostrarán en la tabla principal de la opción, facilitando la visualización y gestión de los diferentes operadores:
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/resultadoBusquedaOperador.webp"
-      alt="Resultado de las búsquedas"
-      width={700}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/resultadoBusquedaOperador.webp"
+    alt="Resultado de las búsquedas"
+    width={800}
+    height={300}
+  />
 </div>
 
 ## Editar operador
 
 Una vez localizado el operador en la tabla de resultados, se encontrará un botón ubicado en el extremo derecho de la fila correspondiente.
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/editarOperador.webp"
-      alt="Botón para editar la información de los operadores"
-      width={700}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/editarOperador.webp"
+    alt="Botón para editar la información de los operadores"
+    width={800}
+    height={300}
+  />
 </div>
 
 Al hacer clic en este botón, se abrirá un formulario que mostrará la información detallada del registro seleccionado, permitiendo al usuario editar su información.
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/formularioEditarOperador.webp"
-      alt="Formulario editar la información de los operadores"
-      width={700}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioEditarOperador.webp"
+    alt="Formulario editar la información de los operadores"
+    width={800}
+    height={300}
+  />
 </div>
 
 ## Asignar permisos 
@@ -164,46 +135,37 @@ En el formulario de edición en la pestaña “Permisos”, se gestionan los per
 * [crear permisos](/moduloAdministrador/seguridad/permisos): en este link podrá aprender a crear permisos.
 
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/buscarPermisos.webp"
-      alt="Buscar permisos por descripción"
-      width={500}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/buscarPermisos.webp"
+    alt="Buscar permisos por descripción"
+    width={500}
+    height={300}
+  />
 </div>
 
 ### Búsqueda
 En este campo podrá buscar por descripción los permisos que desee asignar al operador, una vez desplegados los resultados selecciona el permiso y el sistema lo asigna automáticamente:
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/seleccionPermisos.webp"
-      alt="Selección de permisos que va a tener el operador"
-      width={500}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/seleccionPermisos.webp"
+    alt="Selección de permisos que va a tener el operador"
+    width={500}
+    height={300}
+  />
 </div>
 
 ### Gestión
 En la parte inferior el sistema lista todos los permisos que el operador tiene asignados, en donde podrá, según la necesidad, eliminar algún permiso:
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/eliminarPermiso.webp"
-      alt="Eliminar permisos del operador"
-      width={500}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/eliminarPermiso.webp"
+    alt="Eliminar permisos del operador"
+    width={500}
+    height={300}
+  />
 </div>
 
 ## Cambiar estado de un operador
@@ -212,28 +174,22 @@ En la fila correspondiente al operador encontrado, se ubicará un interruptor (s
 
 **Activo:**
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/operadorActivo.webp"
-      alt="Interruptor de operador activo"
-      width={700}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/operadorActivo.webp"
+    alt="Interruptor de operador activo"
+    width={800}
+    height={300}
+  />
 </div>
 
 **Inactivo:**
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/operadorInactivo.webp"
-      alt="Interruptor de operador inactivo"
-      width={700}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/operadorInactivo.webp"
+    alt="Interruptor de operador inactivo"
+    width={800}
+    height={300}
+  />
 </div>

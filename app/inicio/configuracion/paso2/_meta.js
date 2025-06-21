@@ -1,6 +1,6 @@
 
 const myObject = {
-creacionSede: "Creación de sedes",
-asignarSede: "Asignación de sedes",
+creacionSede: "Creación de Sedes",
+asignarSede: "Asignación de Sedes",
 };
 export default myObject;

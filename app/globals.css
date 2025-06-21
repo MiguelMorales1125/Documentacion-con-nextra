@@ -1,0 +1,16 @@
+.contenedor-imagenes{
+  display: flex;
+  justify-content: center;
+}
+
+
+.contenedor-imagenes img {
+  border-radius: 8px !important; 
+}
+
+
+/* Aplica a los elementos del portal de zoom */
+[data-rmiz-modal-overlay],
+[data-rmiz-modal-img] {
+  background-color: rgba(0, 0, 0, 0.458) !important;
+}

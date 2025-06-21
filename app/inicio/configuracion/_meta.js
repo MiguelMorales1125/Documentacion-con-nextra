@@ -1,5 +1,5 @@
 const myObject = {
-    paso1: "admin y empresa",
-    paso2: "sedes",
+    paso1: "Admin y Empresa",
+    paso2: "Sedes",
 };
 export default myObject;

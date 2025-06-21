@@ -1,6 +1,4 @@
-import Image from 'next/image'
-import Zoom from 'react-medium-image-zoom'
-import 'react-medium-image-zoom/dist/styles.css'
+import { ImageZoom } from 'nextra/components'
 
 # Sedes 
 
@@ -11,16 +9,13 @@ Las sedes se refieren a las ubicaciones físicas donde se encuentran las instala
 1.  Para acceder, primero debe ingresar a la opción de configuración desde el menú principal del módulo de citas.
 2.  Una vez en la configuración, se desplegará un submenú donde encontrará la opción específica "Sedes". Al seleccionar esta opción, podrá gestionar y administrar las sedes donde se atenderá a los usuarios.
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/configSedes.webp"
-      alt="configuración de sedes"
-      width={800}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/configSedes.webp"
+    alt="configuración de sedes"
+    width={800}
+    height={300}
+  />
 </div>
 
 ## Crear sede
@@ -46,16 +41,13 @@ Al hacer clic en este botón, se abrirá el siguiente formulario que permite la 
 - **Hora final (Campo con formato de hora):** Será la hora a partir de la cual se terminará la atención de usuarios.
 - **Límite de turnos (Campo numérico):** Cantidad máxima diaria de turnos que podrá tener un paciente registrado, si este campo es cero (0), los usuarios no tendrán limitaciones en el número de turnos.
 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/formularioNuevaSede.webp"
-      alt="formulario para ingresar la información de la nueva sede"
-      width={500}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioNuevaSede.webp"
+    alt="formulario para ingresar la información de la nueva sede"
+    width={500}
+    height={300}
+  />
 </div>
 
 La pestaña de servicios es inaccesible al momento de crear la sede, una vez creada deberá acceder a la edición de este registro para poder agregarlos.
@@ -64,16 +56,13 @@ La pestaña de servicios es inaccesible al momento de crear la sede, una vez cre
 
 El campo de búsqueda permite listar sedes a partir de un código, nombre, teléfono o correo.
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/buscarSede.webp"
-      alt="búsqueda de sedes"
-      width={800}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/buscarSede.webp"
+    alt="búsqueda de sedes"
+    width={800}
+    height={300}
+  />
 </div>
 
 ### Filtros
@@ -81,59 +70,47 @@ Además, se pueden aplicar los siguientes filtros:
 
 1. Filtro por **Estado**: permite filtrar por ***Todos***, ***Activos*** o ***Inactivos***.
 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/sedeFiltroEstado.webp"
-      alt="filtro de sede por estado"
-      width={800}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/sedeFiltroEstado.webp"
+    alt="filtro de sede por estado"
+    width={800}
+    height={300}
+  />
 </div>
 
 2. Filtro **Ordenar por**: permite filtrar por antigüedad.
 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/sedeFiltroOrdenar.webp"
-      alt="filtro de sede por orden de antigüedad"
-      width={800}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/sedeFiltroOrdenar.webp"
+    alt="filtro de sede por orden de antigüedad"
+    width={800}
+    height={300}
+  />
 </div>
 
 Los resultados de la búsqueda se mostrarán en la tabla principal de la opción, facilitando la visualización y gestión de los diferentes operadores:
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/resultadoBusquedaSedes.webp"
-      alt="Resultados de las búsquedas en sedes"
-      width={800}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/resultadoBusquedaSedes.webp"
+    alt="Resultados de las búsquedas en sedes"
+    width={800}
+    height={300}
+  />
 </div>
 
 ## Editar sede
 Una vez localizada la sede deseada en la tabla de resultados, se encontrará un botón ubicado en el extremo izquierdo de la fila correspondiente.
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/editarSede.webp"
-      alt="Botón para editar sedes"
-      width={800}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/editarSede.webp"
+    alt="Botón para editar sedes"
+    width={800}
+    height={300}
+  />
 </div>
 
 Al hacer clic en este botón, se abrirá un formulario que mostrará la información detallada del registro seleccionado, permitiendo al usuario editar su información.
@@ -141,89 +118,71 @@ Al hacer clic en este botón, se abrirá un formulario que mostrará la informac
 
 Dentro de la edición de la sede, se puede acceder a la pestaña "Datos básicos". En esta ventana, se encuentra la información de la sede.
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/formularioEditarSede.webp"
-      alt="formulario para editar la información de la sede"
-      width={500}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioEditarSede.webp"
+    alt="formulario para editar la información de la sede"
+    width={500}
+    height={300}
+  />
 </div>
 
 ### Pestaña "servicios"
 Dentro de la edición de la sede, se puede acceder a la pestaña "Servicios". En esta ventana, se encuentra un campo de búsqueda que permite buscar servicios por código o descripción. Esta pestaña solo está disponible en el módulo de citas.
 *   Al ingresar un término de búsqueda en el campo proporcionado, el sistema filtra automáticamente los servicios disponibles en función del código o la descripción: [¿Cómo crear un servicio?](/moduloGestionCitas)
 <br /> 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/editarSedeServicios.webp"
-      alt="Apartado para editar los servicios de la sede"
-      width={500}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/editarSedeServicios.webp"
+    alt="Apartado para editar los servicios de la sede"
+    width={500}
+    height={300}
+  />
 </div>
 
 * Luego, se pueden agregar los servicios que se prestarán en la nueva sede seleccionando los resultados de la búsqueda para añadirlos. (Cada servicio agregado tiene la opción de ser **eliminado** de la lista)
 <br /> 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/editarSedeServicioSeleccionado.webp"
-      alt="Resultado de la selección de servicios"
-      width={500}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/editarSedeServicioSeleccionado.webp"
+    alt="Resultado de la selección de servicios"
+    width={500}
+    height={300}
+  />
 </div>
 
 ### Pestaña "Aseguradoras"
 Dentro de la edición de la sede también podemos agregar o eliminar las aseguradoras para la atención de los usuarios afiliados a estas. [¿Cómo crear una Aseguradora?](/moduloGestionCitas)
 <br /> 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/editarSedeAseguradoras.webp"
-      alt="Apartado para editar las aseguradoras de la sede"
-      width={500}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/editarSedeAseguradoras.webp"
+    alt="Apartado para editar las aseguradoras de la sede"
+    width={500}
+    height={300}
+  />
 </div>
 
 * En el campo aseguradora podemos filtrar estas para poder agregarlas. 
 <br /> 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/editarSedeAsignarAseguradora.webp"
-      alt="Asignación de una aseguradora"
-      width={500}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/editarSedeAsignarAseguradora.webp"
+    alt="Asignación de una aseguradora"
+    width={500}
+    height={300}
+  />
 </div>
 
 * Una vez agregada una aseguradora quedará listada en la tabla, donde tendrá la opción de eliminarla de la lista.
 <br /> 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/aseguradoraAsignadaSede.webp"
-      alt="Aseguradora asignada con opción de ser eliminada"
-      width={500}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/aseguradoraAsignadaSede.webp"
+    alt="Aseguradora asignada con opción de ser eliminada"
+    width={500}
+    height={300}
+  />
 </div>
 
 ## Cambiar estado de sede
@@ -232,28 +191,22 @@ En la fila correspondiente a la sede encontrada, se ubicará un interruptor (swi
 
 **Activo:**
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/sedeActiva.webp"
-      alt="Interruptor de sede activo"
-      width={800}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/sedeActiva.webp"
+    alt="Interruptor de sede activo"
+    width={800}
+    height={300}
+  />
 </div>
 
 **Inactivo:**
 <br />
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
-      src="/sedeInactiva.webp"
-      alt="Interruptor de sede inactivo"
-      width={800}
-      height={300}
-      unoptimized
-    />
-  </Zoom>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/sedeInactiva.webp"
+    alt="Interruptor de sede inactivo"
+    width={800}
+    height={300}
+  />
 </div>

@@ -1,61 +1,47 @@
-import Image from 'next/image'
-import Zoom from 'react-medium-image-zoom'
-import 'react-medium-image-zoom/dist/styles.css'
+import { ImageZoom } from 'nextra/components'
 
 # Creación de empresa
 
 - [iniciaremos sesión](https://cms.citas-multisalud.com/) con la información del usuario previamente creado.
 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
+<div className="contenedor-imagenes">
+<ImageZoom 
       src="/InicioSesion.webp"
       alt="Inicio de sesion"
-      width={400}
+      width={500}
       height={300}
-      unoptimized
-    />
-  </Zoom>
+/>
 </div>
 
 - Al pasar exitosamente por el login, se abrirá la vista de módulos donde ingresaremos a la opcion **Administrador**.
 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
+<div className="contenedor-imagenes">
+<ImageZoom 
       src="/ModuloAdmin.webp"
       alt="ingereso al modulo administrador"
       width={700}
       height={300}
-      unoptimized
-    />
-  </Zoom>
+/>
 </div>
 
 - Una vez en la vista principal del módulo de administrador, se ingresa al apartado **Empresas** disponible en el menú principal ubicado en la parte izquierda de la pantalla.
 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
+<div className="contenedor-imagenes">
+<ImageZoom 
       src="/moduloEmpresa.webp"
       alt="ingereso al modulo empresa"
       width={700}
       height={300}
-      unoptimized
-    />
-  </Zoom>
+/>
 </div>
 
 - En la parte superior derecha de la pantalla se ubicará el botón **Nueva empresa**, el cual desplegará un formulario con todos los campos necesarios para crear una empresa correctamente.
 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
+<div className="contenedor-imagenes">
+<ImageZoom 
       src="/formularioEmpresa.webp"
       alt="formulario sobre datos de la empresa"
       width={700}
       height={300}
-      unoptimized
-    />
-  </Zoom>
+/>
 </div>

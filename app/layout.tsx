@@ -3,7 +3,7 @@ import { Banner, Head, Search } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
 import Image from 'next/image'
-import '../src/app/globals.css';
+import './globals.css';
 
 
 export const metadata = {

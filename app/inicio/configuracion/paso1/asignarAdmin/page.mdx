@@ -1,61 +1,47 @@
-import Image from 'next/image'
-import Zoom from 'react-medium-image-zoom'
-import 'react-medium-image-zoom/dist/styles.css'
+import { ImageZoom } from 'nextra/components'
 
 # Asignacion de empresa a super admin
 
 - Para asignar la nueva empresa al super admin se ingresa a la opción **Operadores**.
 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
+<div className="contenedor-imagenes">
+    <ImageZoom
       src="/moduloOperadores.webp"
       alt="modulo operadores"
       width={800}
       height={300}
-      unoptimized
     />
-  </Zoom>
 </div>
 
 - En la tabla estará listado el registro del operador super admin con el que se ha trabajado hasta el momento, encaso de haber más se puede buscar y filtrar por el nombre o documento. Se abre el formulario de edición de nuestro registro con el botón ubicado en el extremo derecho de su fila.
 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
+<div className="contenedor-imagenes">
+    <ImageZoom
       src="/tablaAdmins.webp"
       alt="tabla de todos los administradores disponibles"
       width={800}
       height={300}
-      unoptimized
     />
-  </Zoom>
 </div>
 
 - En el formulario de creación y edición habrá un campo de selección donde buscaremos la opcion con la empresa previamente creada.
 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
+<div className="contenedor-imagenes">
+    <ImageZoom
       src="/formularioAdmin.webp"
       alt="empresa previamente creada"
       width={800}
       height={300}
-      unoptimized
     />
-  </Zoom>
 </div>
 
 - Una vez terminado este proceso, se hará visible el **logo** de la empresa. Esto confirma la **correcta asignación** de la empresa.
 
-<div className="image-zoom-wrapper">
-  <Zoom>
-    <Image
+<div className="contenedor-imagenes">
+    <ImageZoom
       src="/logoEmpresa.webp"
       alt="logo de empresa"
       width={800}
       height={300}
-      unoptimized
     />
-  </Zoom>
 </div>
