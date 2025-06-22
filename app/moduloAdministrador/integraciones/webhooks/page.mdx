@@ -1,0 +1,144 @@
+import { ImageZoom } from 'nextra/components'
+
+# Webhooks
+
+En esta opción se podrá configurar los webhooks para la migración de información.
+
+## Ingreso a la opción 
+Para acceder, debes ingresar al submenú “Integraciones”, luego la opción “Webhooks”.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/webhooks.webp"
+    alt="Apartado webhooks"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Crear webhook
+
+Dentro de la opción de "Webhooks", se encuentra disponible un botón con el texto "Nuevo webhook". 
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/crearWebhook.webp"
+    alt="Nuevo webhook"
+    width={800}
+    height={200}
+  />
+</div>
+Al hacer clic en este botón, se abrirá el siguiente formulario que permite la entrada de datos para la creación de un nuevo permiso:
+
+- **Método (Campo de selección, Obligatorio):** En este campo podrá seleccionar entre los diferentes métodos de petición, GET, POST, PUT y DELETE.
+- **Tipo de evento (Campo de selección, Obligatorio):** En este campo podrá seleccionar entre los diferentes eventos que cuentan con esta funcionalidad los cuales son, crear cita, asistió a la cita y cancelar cita.
+- **URL(Obligatorio):** Esta es la dirección URL donde se enviará la notificación. Es el endpoint que recibirá la información del evento.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioWebhook.webp"
+    alt="Formulario webhook"
+    width={700}
+    height={300}
+  />
+</div>
+
+## Buscar webhook
+
+Dentro de la opción, el campo de búsqueda permite listar permisos filtrando por la URL.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/buscarWebhook.webp"
+    alt="Buscar webhook"
+    width={700}
+    height={300}
+  />
+</div>
+
+### Filtros
+Además, se pueden aplicar los siguientes filtros:
+
+1. Filtro por **estado**: permite filtrar por Todos, Activos o Inactivos.
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroEstadoWebhook.webp"
+    alt="Filtro por estado"
+    width={700}
+    height={300}
+  />
+</div>
+
+2. Filtro **Ordenar por**: Permite filtrar por antigüedad, con opciones de "más reciente" o "más antiguo".
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroOrdenarWebhook.webp"
+    alt="Filtro ordenar por"
+    width={700}
+    height={300}
+  />
+</div>
+
+Los resultados de la búsqueda se mostrarán en la tabla principal de la opción, facilitando la visualización y gestión de los diferentes webhooks:
+<br/>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/resultadoFiltroWebhook.webp"
+    alt="Resultados del filtro"
+    width={700}
+    height={300}
+  />
+</div>
+
+## Editar webhook 
+
+Una vez localizado el **webhook** en la tabla de resultados, se encontrará un botón ubicado en el extremo derecho de la fila correspondiente.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/editarWebhook.webp"
+    alt="Botón editar webhook"
+    width={700}
+    height={300}
+  />
+</div>
+
+Al hacer clic en este botón, se abrirá un formulario que mostrará la información detallada del registro seleccionado, permitiendo al usuario editar su información.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioEditarWebhook.webp"
+    alt="Formulario para editar webhook"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Cambiar estado de un webhook
+
+En la fila correspondiente al webhook encontrado, se ubicará un interruptor (switch) al final de la misma. Este interruptor permite cambiar el estado del registro seleccionado, donde la posición de la derecha indica el estado activo y el izquierdo inactivo:
+**Activo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/webhookActivo.webp"
+    alt="Interruptor de webhook activo"
+    width={800}
+    height={300}
+  />
+</div>
+
+**Inactivo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/webhookInactivo.webp"
+    alt="Interruptor de webhook inactivo"
+    width={800}
+    height={300}
+  />
+</div>

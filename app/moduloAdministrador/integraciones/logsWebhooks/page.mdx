@@ -1,0 +1,82 @@
+import { ImageZoom } from 'nextra/components'
+
+# Logs webhooks
+
+En esta opción puede ver el historial de webhooks, cada registro tendrá información detallada de cada ejecución.
+
+## Ingreso a la opción
+
+Para acceder, debe desplegar las opciones del submenú “Integraciones” en el cual se encuentra “Logs Webhooks”.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/logsWebhooks.webp"
+    alt="Modulo logs webhooks"
+    width={800}
+    height={300}
+  />
+</div>
+
+
+## Filtros para el historial
+
+Dentro de la opción de "Logs Webhooks", se encuentran disponibles los siguientes filtros para la visualización de las peticiones hechas previamente.
+
+- **Fecha:** Este campo filtrará y listará los registros de peticiones hechas entre el intervalo de fechas diligenciado.
+- **Estado:** Campo de selección para discriminar registros por el estado de la petición, los cuales son, Todos, 400, 404, 500 y 200.
+- **Ordenar por:** Con este filtro puede organizar los resultados por su antigüedad.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtrosLogWebhooks.webp"
+    alt="filtros log webhooks"
+    width={800}
+    height={300}
+  />
+</div>
+
+Una vez llenos todos los parámetros, según sea requerido, el sistema listara todas los webhooks que cumplan con las condiciones de los filtros.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/resultadoFiltroLogWebhook.webp"
+    alt="Resultados filtros log webhooks"
+    width={800}
+    height={300}
+  />
+</div>
+
+En cada registro podrá ver la información detallada de su estado e información, debe desplegar la información con el botón ubicado en la parte izquierda de cada fila.
+
+ 
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/botonDesplegarInfoLogWebhook.webp"
+    alt="Boton para desplegar información del webhook"
+    width={800}
+    height={300}
+  />
+</div>
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/infoWebhook.webp"
+    alt=" información del webhook"
+    width={800}
+    height={300}
+  />
+</div>
+
+Cuando el resultado de una petición no es exitosa y es identificada la causa, después de la corrección se puede reenviar la petición para su correcta migración.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/botonEnvioPeticion.webp"
+    alt="Boton para desplegar información del webhook"
+    width={800}
+    height={300}
+  />
+</div>
