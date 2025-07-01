@@ -1,0 +1,137 @@
+import { ImageZoom } from 'nextra/components'
+
+# Grupos de servicio
+
+Los Grupos de Servicio son conjuntos o categorías que agrupan varios tipos de servicios médicos relacionados entre sí.
+
+## Ingreso a la opción 
+1. Para acceder, primero debe ingresar a la opción de configuración desde el menú principal del módulo de citas.
+2. Una vez en la configuración, se desplegará un submenú donde encontrará la opción específica de "Grupos de Servicio". Al seleccionar esta opción, podrá gestionar y administrar los grupos de servicios médicos según las necesidades.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/grupoServicios.webp"
+    alt="Apartado grupo de servicios"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Crear grupo de servicio
+
+Dentro de la opción de "Grupos de Servicio", se encuentra disponible un botón denominado "Nuevo grupo de servicio".
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/nuevoGrupoServicio.webp"
+    alt="Nueva grupo servicio"
+    width={800}
+    height={300}
+  />
+</div>
+
+Al hacer clic en este botón, se abrirá un formulario que permite la entrada de datos para la creación de un nuevo grupo de servicio. El formulario de ingreso de datos está diseñado para capturar información del grupo de servicio y consta de  los siguientes campos:
+
+- **Código (Campo único/Obligatorio)**: Este campo requiere un código único que identifique de manera exclusiva al grupo de servicio. El sistema verificará automáticamente la unicidad de este código para evitar duplicados y garantizar la integridad de los datos.
+- **Descripción (Obligatorio):** En este campo, se debe proporcionar una descripción concisa pero completa del grupo de servicio. Esta descripción ayudará a contextualizar y comprender mejor la función y el propósito del grupo de servicio dentro del sistema.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioGrupoServicio.webp"
+    alt="Formulario grupo servicio"
+    width={600}
+    height={300}
+  />
+</div>
+
+## Buscar grupo de servicio
+
+Dentro de la función de "Grupos de Servicio", el campo de búsqueda admite la introducción de un código o una descripción para localizar grupos de servicio específicos:
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/buscarGrupoServicio.webp"
+    alt="Buscar grupo servicio"
+    width={700}
+    height={300}
+  />
+</div>
+
+### Filtros
+Además, se pueden aplicar los siguientes filtros:
+
+1. Filtro por **estado**: permite filtrar por Todos, Activos o Inactivos.
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroEstadoGrupoServicio.webp"
+    alt="Filtro por estado"
+    width={700}
+    height={300}
+  />
+</div>
+
+2. Filtro **Ordenar por**: Permite filtrar por antigüedad.
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroOrdenarGrupoServicio.webp"
+    alt="Filtro ordenar por"
+    width={700}
+    height={300}
+  />
+</div>
+
+Los resultados de la búsqueda se mostrarán en la tabla principal de la opción, facilitando la visualización y gestión de los grupos de servicio correspondientes.
+
+## Editar grupo de servicio 
+
+Una vez localizado el grupo deseado en la tabla de resultados, se encontrará un botón ubicado en el extremo derecho de la fila correspondiente:
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/editarGrupoServicio.webp"
+    alt="Botón editar grupo servicio"
+    width={700}
+    height={300}
+  />
+</div>
+
+Al hacer clic en este botón, se abrirá un formulario que mostrará la información detallada del registro seleccionado, permitiendo al usuario editar su información:
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioEditarGrupoServicio.webp"
+    alt="Formulario para editar el grupo de servicio"
+    width={600}
+    height={300}
+  />
+</div>
+
+## Cambiar estado de un grupo de servicio
+
+En la fila correspondiente al grupo encontrado, se ubicará un interruptor (switch) al final de la misma. Este interruptor permite cambiar el estado del registro seleccionado, donde la posición de la derecha indica el estado activo.
+
+**Activo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/grupoServicioActivo.webp"
+    alt="Interruptor de grupo servicio activo"
+    width={800}
+    height={300}
+  />
+</div>
+
+**Inactivo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/grupoServicioInactivo.webp"
+    alt="Interruptor de grupo de servicio inactivo"
+    width={800}
+    height={300}
+  />
+</div>
