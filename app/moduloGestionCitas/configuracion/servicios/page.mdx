@@ -1,0 +1,221 @@
+import { ImageZoom } from 'nextra/components'
+
+# Servicios
+
+Los Servicios son las prestaciones médicas individuales que ofrece la empresa de salud dentro de cada Grupo de Servicio.
+
+## Ingreso a la opción 
+1. Para acceder, primero debe ingresar a la opción de configuración desde el menú principal del módulo de citas.
+2.  Una vez en la configuración, se desplegará un submenú donde encontrará la opción específica de "Servicios". Al seleccionar esta opción, podrá gestionar y administrar los servicios médicos según las necesidades de su empresa prestadora de salud.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/servicios.webp"
+    alt="Apartado servicios"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Crear servicio
+
+Dentro de la opción de "Servicios", se encuentra disponible un botón denominado "Nuevo servicio". 
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/nuevoServicio.webp"
+    alt="Nueva servicio"
+    width={800}
+    height={300}
+  />
+</div>
+
+Al hacer clic en este botón, se abrirá el siguiente formulario que permite la entrada de datos para la creación de un nuevo grupo de servicio.
+
+- **Grupo de Servicio (Campo de búsqueda):** Este campo permite realizar una búsqueda para seleccionar el grupo al que pertenece el nuevo servicio. Facilita la asociación del servicio con el grupo correspondiente, lo que es crucial para la organización y clasificación efectiva de los servicios dentro del sistema.
+[Grupos de servicio](/moduloGestionCitas/configuracion/grupoServicios)
+- **Código (Campo único):** El código único asignado a cada servicio garantiza su identificación exclusiva en el sistema. Este código no se puede repetir y es fundamental para la integridad y la gestión eficiente de los servicios.
+- **Descripción:** En este campo, se debe proporcionar una descripción detallada y significativa del nuevo servicio. La descripción ayuda a comprender el propósito, alcance y características clave del servicio, lo que facilita su utilización y gestión en el contexto del sector salud.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioServicio.webp"
+    alt="Formulario servicio"
+    width={600} 
+    height={300}
+  />
+</div>
+
+## Buscar servicio
+
+Dentro de la función de "Servicios", el campo de búsqueda permite digitar un código o una descripción para localizar servicios específicos:
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/buscarServicio.webp"
+    alt="Buscar servicio"
+    width={700}
+    height={300}
+  />
+</div>
+
+### Filtros
+Además, se pueden aplicar los siguientes filtros:
+
+1. Filtro por **estado**: permite filtrar por Todos, Activos o Inactivos.
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroEstadoServicios.webp"
+    alt="Filtro por estado"
+    width={700}
+    height={300}
+  />
+</div>
+
+2. Filtro **Ordenar por**: Permite filtrar por antigüedad.
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroOrdenarServicios.webp"
+    alt="Filtro ordenar por"
+    width={700}
+    height={300}
+  />
+</div>
+
+Los resultados de la búsqueda se mostrarán en la tabla principal de la opción, facilitando la visualización y gestión de los correspondientes servicios.
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/resultadoBusquedaServicio.webp"
+    alt="Resultado de la busqueda"
+    width={700}
+    height={300}
+  />
+</div>
+
+## Editar servicio 
+
+Una vez localizado el servicio deseado en la tabla de resultados, se encontrará un botón ubicado en el extremo derecho de la fila correspondiente:
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/editarServicio.webp"
+    alt="Botón editar servicio"
+    width={700}
+    height={300}
+  />
+</div>
+
+Al hacer clic en este botón, se abrirá un formulario que mostrará la información detallada del registro seleccionado, permitiendo al usuario editar su información:
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioEditarServicio.webp"
+    alt="Formulario para editar el servicio"
+    width={600}
+    height={300}
+  />
+</div>
+
+## Cambiar estado de un servicio
+
+En la fila correspondiente al grupo encontrado, se ubicará un interruptor (switch) al final de la misma. Este interruptor permite cambiar el estado del registro seleccionado, donde la posición de la derecha indica el estado activo.
+
+**Activo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/servicioActivo.webp"
+    alt="Interruptor de servicio activo"
+    width={800}
+    height={300}
+  />
+</div>
+
+**Inactivo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/servicioInactivo.webp"
+    alt="Interruptor de servicio inactivo"
+    width={800}
+    height={300}
+  />
+</div>
+
+
+## Visualización web
+
+Para cambiar la visibilidad de un servicio en la aplicación del paciente se utiliza el siguiente interruptor, siendo activo a la derecha:
+
+**Activo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/servicioWebActivo.webp"
+    alt="Interruptor de servicio activo"
+    width={800}
+    height={300}
+  />
+</div>
+
+**Inactivo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/servicioWebInactivo.webp"
+    alt="Interruptor de servicio inactivo"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Importación de servicios
+
+En la parte superior derecha se encuentra el botón de menú de acciones, el cual desplegara la opción “importar desde csv”.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/menuAcciones.webp"
+    alt="boton de menu de acciones"
+    width={800}
+    height={300}
+  />
+</div>
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/importarServicio.webp"
+    alt="boton para importar servicio"
+    width={800}
+    height={300}
+  />
+</div>
+Esta opción abrirá la venta “Importar archivo csv de servicios” el cual tiene un campo de búsqueda donde se podrá hacer búsqueda del grupo de servicios al que estarán asociados los servicios a importarse. 
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/busquedaGrupoServicios.webp"
+    alt="campo de busqueda para agregar el csv a un grupo de servicios"
+    width={800}
+    height={300}
+  />
+</div>
+
+Una vez cargado el servicio debe buscar la ubicación del archivo por mediante el navegador de archivos que se abrirá con el botón “Importar”. Cuando el archivo esté seleccionado podrá iniciar el proceso de carga con el botón “Subir archivo”. 
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/importarArchivo.webp"
+    alt="botón para importar el archivo csv"
+    width={800}
+    height={300}
+  />
+</div>
+
+Para que el archivo tenga la estructura correcta puede descargar el formato con el botón “Estructura.”
