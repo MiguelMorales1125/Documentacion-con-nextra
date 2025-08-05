@@ -1,0 +1,165 @@
+import { ImageZoom } from 'nextra/components'
+
+# Aseguradoras
+
+Las aseguradoras son entidades que brindan cobertura médica a los pacientes a través de pólizas de seguros de salud.
+
+## Ingreso a la opción 
+1. Para acceder, primero debe ingresar a la opción de configuración desde el menú principal del módulo de citas.
+2.  Una vez en la configuración, se desplegará un submenú donde encontrará la opción específica "Aseguradoras". Al seleccionar esta opción, podrá gestionar y administrar las aseguradoras disponibles en el sistema.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/aseguradoras.webp"
+    alt="Apartado aseguradoras"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Crear aseguradora
+
+Dentro de la opción de "Aseguradoras", se encuentra disponible un botón con el texto "Nueva aseguradora". 
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/crearAseguradora.webp"
+    alt="Nueva aseguradora"
+    width={800}
+    height={300}
+  />
+</div>
+Al hacer clic en el botón "Nueva aseguradora" dentro de la sección de "Aseguradoras", se abre un formulario con los siguientes campos para la entrada de datos:
+
+- **Código (Obligatorio y único):** Este campo requiere un código único para identificar de manera exclusiva a la nueva aseguradora dentro del sistema.
+- **NIT (Obligatorio):** En este campo se debe ingresar el Número de Identificación Tributaria (NIT) de la aseguradora.
+- **Nombre (Obligatorio):** Aquí se debe ingresar el nombre completo de la aseguradora.
+- **Régimen (Obligatorio, campo de selección):** Este campo ofrece la opción de seleccionar el régimen al que pertenece la aseguradora. Las opciones disponibles son "Contributivo" y "Subsidiado".
+- **Dirección:** En este campo se debe proporcionar la dirección física de la aseguradora.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioAseguradora.webp"
+    alt="Formulario aseguradora"
+    width={700}
+    height={300}
+  />
+</div>
+
+La pestaña de servicios es inaccesible al momento de crear la aseguradora, una vez creada deberá acceder a la edición de este registro para poder agregarlos.
+
+## Buscar aseguradora
+
+Dentro de la vista principal de la opción, el campo de búsqueda permite listar aseguradoras a partir de un código o descripción.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/buscarAseguradora.webp"
+    alt="Buscar aseguradora"
+    width={700}
+    height={300}
+  />
+</div>
+
+### Filtros
+Además, se pueden aplicar los siguientes filtros:
+
+1. Filtro por **estado**: permite filtrar por Todos, Activos o Inactivos.
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroEstadoAseguradora.webp"
+    alt="Filtro por estado"
+    width={700}
+    height={300}
+  />
+</div>
+
+2. Filtro **Ordenar por**: Permite filtrar por antigüedad.
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroOrdenarAseguradora.webp"
+    alt="Filtro ordenar por"
+    width={700}
+    height={300}
+  />
+</div>
+
+Los resultados de la búsqueda se mostrarán en la tabla principal de la opción, facilitando la visualización y gestión de las correspondientes aseguradoras.
+
+## Editar aseguradora
+
+Una vez localizada la aseguradora deseada en la tabla de resultados, se encontrará un botón ubicado en el extremo izquierdo de la fila correspondiente.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/editarAseguradora.webp"
+    alt="Botón editar aseguradora"
+    width={700}
+    height={300}
+  />
+</div>
+
+Al hacer clic en este botón, se abrirá un formulario que mostrará la información detallada del registro seleccionado, permitiendo al usuario editar su información:
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioEditarAseguradora.webp"
+    alt="Formulario para editar la aseguradora"
+    width={600}
+    height={300}
+  />
+</div>
+
+- Dentro de la edición de la aseguradora, se puede acceder a la pestaña "Servicios". En esta pestaña, se encuentra un campo de búsqueda que permite buscar servicios por código o descripción.
+- Al ingresar un término de búsqueda en el campo proporcionado, el sistema filtra automáticamente los servicios disponibles en función del código o la descripción: 
+[¿como crear un servicio?](/moduloGestionCitas/configuracion/servicios)
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/asignarServicios.webp"
+    alt="Asignar servicios"
+    width={600}
+    height={300}
+  />
+</div>
+- Luego, se pueden agregar los servicios que se prestarán en la nueva sede seleccionando los resultados de la búsqueda para añadirlos.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/asignarServicioAseguradora.webp"
+    alt="asignar el servicio o eliminarlo"
+    width={600}
+    height={300}
+  />
+</div>
+
+## Cambiar estado de aseguradora
+
+En la fila correspondiente a la aseguradora encontrada, se ubicará un interruptor (switch) al final de la misma. Este interruptor permite cambiar el estado del registro seleccionado, donde la posición de la derecha indica el estado activo.
+
+**Activo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/aseguradoraActiva.webp"
+    alt="Interruptor de aseguradora activo"
+    width={800}
+    height={300}
+  />
+</div>
+
+**Inactivo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/aseguradoraInactiva.webp"
+    alt="Interruptor de aseguradora inactivo"
+    width={800}
+    height={300}
+  />
+</div>

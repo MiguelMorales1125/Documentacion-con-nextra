@@ -1,0 +1,138 @@
+import { ImageZoom } from 'nextra/components'
+
+# Ocupaciones
+
+Esta opción permite gestionar y registrar las ocupaciones disponibles, las cuales podrán ser asignadas posteriormente a un paciente.
+
+## Ingreso a la opción 
+1. Para acceder, primero debe ingresar a la opción de configuración desde el menú principal del módulo de citas.
+2.  Una vez en la configuración, se desplegará un submenú donde encontrará la opción específica de "Ocupaciones". Al seleccionar esta opción, podrá gestionar y administrar las ocupaciones las necesidades de su empresa prestadora de salud.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/ocupaciones.webp"
+    alt="Apartado ocupaciones"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Crear ocupación
+
+Dentro de la opción de "Ocupaciones", se encuentra disponible un botón "Nueva ocupación". 
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/nuevaOcupacion.webp"
+    alt="Nueva ocupación"
+    width={800}
+    height={300}
+  />
+</div>
+
+Al hacer clic en este botón, se abrirá el siguiente formulario que permite la entrada de datos para la creación de una nueva ocupación.
+
+- **Nombre:** En este campo pondrá un identificador a la ocupación.
+- **Descripción:** En este campo, se debe proporcionar una descripción detallada y significativa de la nueva ocupación.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioOcupacion.webp"
+    alt="Formulario ocupación"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Buscar ocupación
+
+En la vista principal de la opción "Ocupaciones", el campo de búsqueda permite digitar un nombre o una descripción para localizar ocupaciones:
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/buscarOcupacion.webp"
+    alt="Buscar grupo servicio"
+    width={700}
+    height={300}
+  />
+</div>
+
+### Filtros
+Además, se pueden aplicar los siguientes filtros:
+
+1. Filtro por **estado**: permite filtrar por Todos, Activos o Inactivos.
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroEstadoGrupoServicio.webp"
+    alt="Filtro por estado"
+    width={700}
+    height={300}
+  />
+</div>
+
+2. Filtro **Ordenar por**: Permite filtrar por antigüedad.
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroOrdenarGrupoServicio.webp"
+    alt="Filtro ordenar por"
+    width={700}
+    height={300}
+  />
+</div>
+
+Los resultados de la búsqueda se mostrarán en la tabla principal de la opción, facilitando la visualización y gestión de los grupos de servicio correspondientes.
+
+## Editar ocupación
+
+Una vez localizada la ocupación deseada en la tabla de resultados, se encontrará un botón ubicado en el extremo derecho de la fila correspondiente:
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/editarOcupacion.webp"
+    alt="Botón editar ocupacion"
+    width={800}
+    height={300}
+  />
+</div>
+
+Al hacer clic en este botón, se abrirá un formulario que mostrará la información detallada del registro seleccionado, permitiendo al usuario editar su información:
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioEditarOcupacion.webp"
+    alt="Formulario para editar la ocupación"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Cambiar estado de una ocupación
+
+En la fila correspondiente a la ocupación encontrada, se ubicará un interruptor (switch) al final de la misma. Este interruptor permite cambiar el estado del registro seleccionado, donde la posición de la derecha indica el estado activo.
+
+**Activo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/ocupacionActiva.webp"
+    alt="Interruptor de ocupación activo"
+    width={800}
+    height={300}
+  />
+</div>
+
+**Inactivo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/ocupacionInactiva.webp"
+    alt="Interruptor de ocupación inactivo"
+    width={800}
+    height={300}
+  />
+</div>

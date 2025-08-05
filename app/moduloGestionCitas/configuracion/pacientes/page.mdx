@@ -1,0 +1,257 @@
+import { ImageZoom } from 'nextra/components'
+
+# Pacientes
+
+Los pacientes son las personas que reciben atención médica y servicios de salud de los profesionales y establecimientos médicos. La información tratada en esta opción será compartida entre los módulos de  citas y digiturno.
+
+## Ingreso a la opción 
+1. Para acceder, primero debe ingresar a la opción de configuración desde el menú principal del módulo de citas.
+2. Una vez en la configuración, se desplegará un submenú donde encontrará la opción específica "Pacientes". Al seleccionar esta opción, podrá gestionar y administrar los médicos disponibles en el sistema.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/pacientes.webp"
+    alt="Apartado pacientes"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Crear paciente
+
+Dentro de la opción de "Pacientes", se encuentra disponible un botón con el texto "Nuevo paciente".
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/nuevoPaciente.webp"
+    alt="Nuevo paciente"
+    width={800}
+    height={300}
+  />
+</div>
+
+Al hacer clic en el botón "Nuevo médico" en la vista principal de la opción, se abre un formulario con los siguientes campos para la entrada de datos:
+
+- **Tipo de Documento (Obligatorio, campo de selección):** Este campo ofrece una lista desplegable que enumera los tipos de documentos disponibles, como cédula de ciudadanía, tarjeta de identidad, pasaporte, etc.
+- **Número de Identificación (Obligatorio):** En este campo se debe ingresar el número de identificación del médico.
+- **Primer Nombre (Obligatorio):** Aquí se debe ingresar el primer nombre del médico.
+- **Segundo Nombre:** Este campo es opcional y permite ingresar el segundo nombre del médico, si lo tiene.
+- **Primer Apellido (Obligatorio):** Se debe ingresar el primer apellido del médico en este campo.
+- **Segundo Apellido:** Este campo es opcional y permite ingresar el segundo apellido del médico, si lo tiene.
+- **RH:** Campo opcional para ingresar el RH del paciente.
+- **Sexo (Obligatorio, campo de selección):** Este campo ofrece la opción de seleccionar el sexo del médico, con las opciones "Masculino" y "Femenino".
+- **Grupo Étnico (Obligatorio, campo de selección):** Aquí se debe seleccionar el grupo étnico al que pertenece el paciente. La lista desplegable mostrará los grupos étnicos disponibles para elegir.
+- **Fecha de Nacimiento (Obligatorio):** Se debe ingresar la fecha de nacimiento del paciente en este campo.
+- **Régimen (Obligatorio, campo de selección):** Este campo ofrece la opción de seleccionar el régimen al que pertenece el paciente, con las opciones "Contributivo" y "Subsidiado".
+- **Ciudad de Residencia (Obligatorio, campo de selección):** Aquí se debe seleccionar la ciudad de residencia del paciente. La lista desplegable mostrará las ciudades disponibles para elegir.
+- **Nivel Académico (Obligatorio, campo de selección):** En este campo se debe seleccionar el nivel académico del paciente, como preescolar, básica primaria, básica secundaria, etc.
+- **Teléfono (Obligatorio):** Se debe ingresar el número de teléfono de contacto del médico.
+- **Teléfono Secundario:** Este campo es opcional y permite ingresar un segundo número de teléfono del paciente, si lo tiene.
+- **Dirección:** Campo obligatorio con la dirección de residencia del paciente.
+- **Correo electrónico:** Campo obligatorio para ingresar el email actual del paciente.
+- **Ocupación:** Campo opcional en el cual se filtrará y seleccionará la ocupación del paciente.[¿Como crear una ocupación?](/moduloGestionCitas/configuracion/ocupaciones)
+- **Aseguradora** (Obligatorio, campo de búsqueda por código o nombre): Aquí se debe buscar y seleccionar la aseguradora del paciente. El campo permite realizar la búsqueda por código o nombre para encontrar la aseguradora correspondiente.
+[¿Como crear una especialidad?](/moduloGestionCitas/configuracion/especialidades)
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioPacientes.webp"
+    alt="Formulario pacientes"
+    width={600}
+    height={300}
+  />
+</div>
+
+
+## Importar pacientes
+Dentro de la opción de "Pacientes", se encuentra disponible el botón de opciones para acceder al submenú donde estará el botón con la opción "Importar desde CSV".
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/boton3puntos.webp"
+    alt="botón de 3 puntos"
+    width={800}
+    height={300}
+  />
+</div>
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/importarPacientes.webp"
+    alt="botón importar pacientes"
+    width={800}
+    height={300}
+  />
+</div>
+- Con este botón se accede a la ventana para cargar el archivo csv con la lista de pacientes y estructura adecuada para poder cargarse.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/subirArchivo.webp"
+    alt="Apartado para subir csv"
+    width={700}
+    height={300}
+  />
+</div>
+
+## Desactivar pacientes de una EPS
+Dentro de la opción de "Pacientes", se encuentra disponible el botón de opciones para acceder al submenú donde estará el botón con la opción "Desactivar masivo por EPS".
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/boton3puntos.webp"
+    alt="botón de 3 puntos"
+    width={800}
+    height={300}
+  />
+</div>
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/desactivarPacientes.webp"
+    alt="botón para desactivar masivo por EPS"
+    width={800}
+    height={300}
+  />
+</div>
+
+- Se desplegará la ventana “Desactivar pacientes masivos por EPS”, En el campo aseguradora podrá hacer búsqueda y selección de la aseguradora con la que se quiere hacer el proceso.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/desactivarPacientesMasivos.webp"
+    alt="Apartado para desactivar pacientes masivos por EPS"
+    width={800}
+    height={300}
+  />
+</div>
+Una vez seleccionada con el botón confirmar, terminaría el proceso y todos los pacientes que pertenecen a esta EPS serán desactivados.
+
+## Buscar paciente
+
+Dentro de la vista principal de la opción, el campo de búsqueda permite listar los pacientes a partir del número de documento o nombre.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/buscarPaciente.webp"
+    alt="Buscar paciente"
+    width={800}
+    height={300}
+  />
+</div>
+
+### Filtros
+Además, se pueden aplicar los siguientes filtros:
+
+1. Filtro por **estado**: permite filtrar por Todos, Activos o Inactivos.
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroEstadoPaciente.webp"
+    alt="Filtro por estado"
+    width={700}
+    height={300}
+  />
+</div>
+
+2. Filtro **Ordenar por**: Permite filtrar por antigüedad.
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroOrdenarPaciente.webp"
+    alt="Filtro ordenar por"
+    width={700}
+    height={300}
+  />
+</div>
+
+Los resultados de la búsqueda se mostrarán en la tabla principal de la opción, facilitando la visualización y gestión de las correspondientes aseguradoras.
+
+## Editar paciente
+
+Una vez localizado el paciente deseado en la tabla de resultados, se encontrará un botón ubicado en el extremo izquierdo de la fila correspondiente. 
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/editarPaciente.webp"
+    alt="Botón editar paciente"
+    width={700}
+    height={300}
+  />
+</div>
+
+Al hacer clic en este botón, se abrirá un formulario que mostrará la información detallada del registro seleccionado, permitiendo al usuario editar su información.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioEditarPaciente.webp"
+    alt="Formulario para editar el paciente"
+    width={600}
+    height={300}
+  />
+</div>
+
+## Cambiar estado de paciente
+
+En la fila correspondiente al paciente encontrado, se ubicará un interruptor (switch) al final de la misma. Este interruptor permite cambiar el estado del registro seleccionado, donde la posición de la derecha indica el estado activo.
+
+**Activo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/pacienteActivo.webp"
+    alt="Interruptor de paciente activo"
+    width={800}
+    height={300}
+  />
+</div>
+
+**Inactivo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/pacienteInactivo.webp"
+    alt="Interruptor de paciente inactivo"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Generar reporte de pacientes
+En la parte superior derecha de la vista principal de la opción, se encuentra el botón de "Opciones". Al hacer clic en él, se desplegará la opción "Generar reporte".
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/generarReporte.webp"
+    alt="Botón para generar reporte"
+    width={800}
+    height={300}
+  />
+</div>
+
+- Para descargar el reporte, ingrese al perfil del operador:
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/perfil.webp"
+    alt="Botón perfil"
+    width={800}
+    height={300}
+  />
+</div>
+
+- En esta vista, encontrará la sección "Reportes", donde podrá acceder a los reportes generados por su operador. En la tabla, podrá buscar el reporte deseado y descargarlo.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/apartadoReportes.webp"
+    alt="Apartados reportes"
+    width={800}
+    height={300}
+  />
+</div>
+

@@ -1,0 +1,256 @@
+import { ImageZoom } from 'nextra/components'
+
+# Médicos
+
+Los médicos son profesionales de la salud capacitados para diagnosticar, tratar y gestionar la salud de los pacientes. Cada médico puede tener una o varias especialidades médicas en las que se especializa.
+
+## Ingreso a la opción 
+1. Para acceder, primero debe ingresar a la opción de configuración desde el menú principal del módulo de citas.
+2. Una vez en la configuración, se desplegará un submenú donde encontrará la opción específica "Médicos". Al seleccionar esta opción, podrá gestionar y administrar los médicos disponibles en el sistema.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/medicos.webp"
+    alt="Apartado de Médicos"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Crear médicos
+
+Dentro de la opción de "Médicos", se encuentra disponible un botón con el texto "Nuevo médico". 
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/nuevoMedico.webp"
+    alt="Nuevo medico"
+    width={800}
+    height={300}
+  />
+</div>
+
+Al hacer clic en el botón "Nuevo médico" en la vista principal de la opción, se abre un formulario con los siguientes campos para la entrada de datos:
+
+- **Tipo de Documento (Obligatorio, campo de selección):** Este campo ofrece una lista desplegable que enumera los tipos de documentos disponibles, como cédula de ciudadanía, tarjeta de identidad, pasaporte, etc.
+- **Número de Identificación (Obligatorio):** En este campo se debe ingresar el número de identificación del médico.
+- **Primer Nombre (Obligatorio):** Aquí se debe ingresar el primer nombre del médico.
+- **Segundo Nombre:** Este campo es opcional y permite ingresar el segundo nombre del médico, si lo tiene.
+- **Primer Apellido (Obligatorio):** Se debe ingresar el primer apellido del médico en este campo.
+- **Segundo Apellido:** Este campo es opcional y permite ingresar el segundo apellido del médico, si lo tiene.
+- **Sexo (Obligatorio, campo de selección):** Este campo ofrece la opción de seleccionar el sexo del médico, con las opciones "Masculino" y "Femenino".
+- **Fecha de Nacimiento (Obligatorio):** Aquí se debe ingresar la fecha de nacimiento del médico.
+- **Teléfono (Obligatorio):** Se debe ingresar el número de teléfono de contacto del médico.
+- **Registro médico (Obligatorio):** En este campo se ingresa el código del registro único nacional del talento humano en salud.
+- **Correo Electrónico (Obligatorio):** En este campo se debe proporcionar la dirección de correo electrónico del médico.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioMedico.webp"
+    alt="Formulario medico"
+    width={600}
+    height={300}
+  />
+</div>
+Las pestañas de especialidades y servicios son inaccesibles al momento de crear un médico, una vez creado deberá acceder a la edición de este registro para poder agregarlas.
+
+## Buscar médico
+
+Dentro de la vista principal de la opción, el campo de búsqueda permite listar los médicos a partir del número de documento o nombre.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/buscarMedico.webp"
+    alt="Buscar medico"
+    width={700}
+    height={300}
+  />
+</div>
+
+### Filtros
+Además, se pueden aplicar los siguientes filtros:
+
+1. Filtro por **estado**: permite filtrar por Todos, Activos o Inactivos.
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroEstadoMedico.webp"
+    alt="Filtro por estado"
+    width={700}
+    height={300}
+  />
+</div>
+
+2. Filtro **Ordenar por**: Permite filtrar por antigüedad.
+
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtroOrdenarMedico.webp"
+    alt="Filtro ordenar por"
+    width={700}
+    height={300}
+  />
+</div>
+
+Los resultados de la búsqueda se mostrarán en la tabla principal de la opción, facilitando la visualización y gestión de las correspondientes aseguradoras.
+
+## Editar médico
+
+Una vez localizado el médico deseado en la tabla de resultados, se encontrará un botón ubicado en el extremo izquierdo de la fila correspondiente.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/editarMedico.webp"
+    alt="Botón editar medico"
+    width={700}
+    height={300}
+  />
+</div>
+
+Al hacer clic en este botón, se abrirá un formulario que mostrará la información detallada del registro seleccionado, permitiendo al usuario editar su información:
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioEditarMedico.webp"
+    alt="Formulario para editar el medico"
+    width={600}
+    height={300}
+  />
+</div>
+
+
+### Apartado especialidades
+- Dentro de la edición del médico, se puede acceder a la pestaña "Especialidades". En esta pestaña, se encuentra un campo de búsqueda que permite buscar por código o descripción.
+[¿Como crear una especialidad?](/moduloGestionCitas/configuracion/especialidades)
+- Al ingresar un término de búsqueda en el campo proporcionado, el sistema filtra automáticamente las especialidades disponibles en función del código o la descripción:
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/medicoApartadoEspecialidad.webp"
+    alt="Apartado especialidad"
+    width={600}
+    height={300}
+  />
+</div>
+
+### Apartado Servicios
+- En la pestaña “Servicios” se agregarán o eliminaran los servicios que el médico podrá prestar al usuario. En el campo de búsqueda se pueden filtrar los resultados por código o por nombre. 
+[¿Como crear una especialidad?](/moduloGestionCitas/configuracion/servicios)
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/medicoApartadoServicios.webp"
+    alt="Apartado servicio"
+    width={600}
+    height={300}
+  />
+</div>
+
+### Apartado operador
+- En la sección "Operador", podrá configurar al médico como usuario para que gestione el aplicativo con su propio perfil. El modo operador creará automáticamente un perfil para el médico. En el campo "sede", deberá seleccionar el lugar donde el doctor prestará sus servicios. Finalmente, se configurará la contraseña para el acceso al aplicativo.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/medicoApartadoOperador.webp"
+    alt="Apartado operador"
+    width={600}
+    height={300}
+  />
+</div>
+
+### Apartado firma
+- En la sección "Firma", podrá cargar la firma del doctor, lo que permitirá incluirla de manera automática en los documentos que requieran su validación y autenticidad.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/medicoApartadoFirma.webp"
+    alt="Apartado firma"
+    width={600}
+    height={300}
+  />
+</div>
+
+### Apartado bloquear días
+En la ventana de edición encontrará el panel “Bloquear días”, en este apartado podrá configurar los intervalos de tiempo en que un doctor no prestará servicios.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/medicoApartaddoBloqDias.webp"
+    alt="Apartado bloqueo días"
+    width={600}
+    height={300}
+  />
+</div>
+- Para bloquear días completos, marque la opción "Día completo", luego seleccione uno o más días a bloquear. A continuación, haga clic en el botón "Agregar" y los intervalos se agregarán automáticamente a la tabla.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/diaCompleto.webp"
+    alt="Boton para bloquear dia completo"
+    width={600}
+    height={300}
+  />
+</div>
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/diasBloqueados.webp"
+    alt="lista de días bloqueados"
+    width={600}
+    height={300}
+  />
+</div>
+
+- Para bloquear intervalos de horas, marque la opción "Rango de horas", luego seleccione uno o más días a bloquear. En esta opción, se habilitarán los campos para ingresar la hora inicial y la hora final del intervalo. Finalmente, haga clic en el botón "Agregar" y los intervalos se añadirán automáticamente a la tabla.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/rangoHoras.webp"
+    alt="boton rango de horas"
+    width={600}
+    height={300}
+  />
+</div>
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/rangosBloqueados.webp"
+    alt="Rango de horas bloqueadas"
+    width={600}
+    height={300}
+  />
+</div>  
+**Recuerde que, una vez finalizado el proceso, no se podrán crear nuevas agendas en este espacio para este doctor. Las agendas disponibles que ya existan y se encuentran disponibles serán bloqueadas, mientras que las agendas asignadas permanecerán intactas.**
+
+## Cambiar estado de un grupo de servicio
+
+En la fila correspondiente al médico encontrado, se ubicará un interruptor (switch) al final de la misma. Este interruptor permite cambiar el estado del registro seleccionado, donde la posición de la derecha indica el estado activo.
+
+**Activo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/medicoActivo.webp"
+    alt="Interruptor de medico activo"
+    width={800}
+    height={300}
+  />
+</div>
+
+**Inactivo:**
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/medicoInactivo.webp"
+    alt="Interruptor de medico inactivo"
+    width={800}
+    height={300}
+  />
+</div>
