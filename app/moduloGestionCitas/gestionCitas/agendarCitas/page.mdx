@@ -1,0 +1,135 @@
+import { ImageZoom } from 'nextra/components'
+
+# Agendar cita
+
+Esta opción permite a partir de las agendas de médicos, asignar un paciente a estas para brindar los servicios respectivos.
+
+## Ingreso a la opción 
+1. Para acceder a la gestión de agendas, debe hacer clic en la opción “Agendar cita” en el menú principal del módulo de citas.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/agendarCita.webp"
+    alt="Apartado agendar citas"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Proceso de agendamiento
+
+Para el proceso de agendamiento de citas se deben llenar una serie de campos según las necesidades del servicio:
+
+- **Paciente:** Este campo hace una búsqueda filtrada por documento o nombre del paciente al cual se le agendará una cita médica.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/campoPaciente.webp"
+    alt="Campo paciente"
+    width={800}
+    height={300}
+  />
+</div>
+
+En caso de la necesidad de agendar cita a un paciente inexistente, en la parte superior derecha de la vista principal hay un botón “Nuevo paciente”. También después de seleccionado el paciente en su campo se habilitará el botón “Modificar paciente” para la corrección o actualización de información.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/botonNuevoPaciente.webp"
+    alt="Botón nuevo paciente"
+    width={800}
+    height={300}
+  />
+</div>
+Estos Botones abrirán el formulario de creación y edición de pacientes 
+
+- **Tipo de cita:** Campo de selección para el tipo de cita, ya sea presencial o de telemedicina.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/tipoCita.webp"
+    alt="Tipo de cita"
+    width={800}
+    height={300}
+  />
+</div>
+
+- **Servicio (opcional):** En este campo, se debe realizar una búsqueda filtrada por código o descripción para seleccionar el servicio que se brindará al paciente.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/servicioCita.webp"
+    alt="Servicio"
+    width={800}
+    height={300}
+  />
+</div>
+
+- **Sede (opcional):** En este campo, se debe realizar una búsqueda filtrada por código o nombre para seleccionar la sede donde se dará atención al paciente.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/sedeCita.webp"
+    alt="Sede"
+    width={800}
+    height={300}
+  />
+</div>
+
+- **Fecha:** Campo para ingresar intervalo de fechas entres las cuales el paciente podrá ser atendido.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/fechaCita.webp"
+    alt="fecha"
+    width={350}
+    height={200}
+  />
+</div>
+
+- **Médico (opcional):** Campo para listar solo las agendas de un Doctor especifico.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/medicoCita.webp"
+    alt="Médico"
+    width={800}
+    height={300}
+  />
+</div>
+
+Con los filtros diligenciados, en la tabla quedarán listadas las agendas disponibles. en el extremo derecho de cada una de las filas habrá un botón “Asignar”.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/resultadoFiltroAgendaCita.webp"
+    alt="Resultado filtro"
+    width={800}
+    height={300}
+  />
+</div>
+
+Al hacer clic en botón del espacio agendado acorde a las necesidades del paciente se abrirá una venta con la información completa de la agenda.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/infoCita.webp"
+    alt="Información de la cita"
+    width={800}
+    height={300}
+  />
+</div>
+
+El campo “Notas” es obligatorio, una vez lleno este campo se habilitará el botón “Agendar” para confirmar el agendamiento.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/notasCita.webp"
+    alt="notas"
+    width={800}
+    height={300}
+  />
+</div>
