@@ -1,0 +1,62 @@
+import { ImageZoom } from 'nextra/components'
+
+# Reporte de Citas
+
+Esta opción permite generar reporte de citas médicas de acuerdo a los parámetros o filtros digitados:
+
+## Ingreso a la opción 
+1. Para acceder a la opción de reportes, debe hacer clic en la opción “Reportes” en el menú principal del módulo de citas. <br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/reportes.webp"
+    alt="Apartado reportes citas"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Parámetros del reporte
+Dentro de la opción de "Reporte de citas", se encuentran disponibles los siguientes filtros para el listado y posterior descarga de formato CSV:
+
+- **Paciente:** Este campo filtrará y listará paciente de acuerdo a la búsqueda.
+- **Médico:** Este campo filtrará la citas y solo listará las de un médico especifico.
+- **Servicio: E**ste campo permite que solo se hagan visibles las citas en las que se presta un servicio especifico.
+- **Sede:** Este campo traerá los registros asociados a una de las sedes registradas en el sistema
+- **Fecha:** El único campo obligatorio para empezar la búsqueda y consultar las citas que estés en el intervalo diligenciado.
+- **Tipo:** En este campo se selecciona el tipo de cita que desea consultar, ya sea presencial, telemedicina o ambas
+- **Estado:** Filtra las citas según su estado, que puede ser activa, cancelada, transferida, asignada, vencida o todas las opciones disponibles
+- **Operador**: Selecciona el operador del sistema del cual quieres generar reporte.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtrosReportes.webp"
+    alt="Filtros de los reportes"
+    width={800}
+    height={300}
+  />
+</div>
+
+Una vez diligenciados todos los parámetros, el sistema listara todas las citas que cumplan con estas condiciones:
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/resultadosReportes.webp"
+    alt="Resultados de los filtros de los reportes"
+    width={800}
+    height={300}
+  />
+</div>
+
+Por ultimo, debe dar click en el botón “Descarga reporte” para generar el formato CSV con toda la información filtrada:
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/descargarReporte.webp"
+    alt="Botón para descargar reporte"
+    width={800}
+    height={300}
+  />
+</div>
