@@ -1,0 +1,228 @@
+import { ImageZoom } from 'nextra/components'
+
+# Gestionar citas 
+
+La opción "Gestionar Citas" te brinda una herramienta centralizada para visualizar y administrar todas las citas creadas en tu sistema. Utilizando filtros como paciente, médico, servicio, sede, fecha, tipo y estado, puedes acceder a una lista detallada de citas que se ajustan a tus criterios de búsqueda. Para cada cita listada, tendrás acciones disponibles para gestionarlas según las necesidades, garantizando un seguimiento efectivo y una atención médica coordinada.
+
+## Ingreso a la opción
+
+Para acceder a la gestión de citas, debe hacer clic en la opción “Gestionar citas” en el menú principal del módulo de citas.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/gestionarCitas.webp"
+    alt="Gestionar citas"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Visualización de citas 
+
+Dentro de la opción de "Gestión de citas", se encuentran disponibles los siguientes filtros para el listado de citas para interactuar con cada una de ellas:
+
+- **Paciente:** Este campo filtrará la citas y solo listará las de un paciente especifico.
+- **Médico:** Este campo filtrará la citas y solo listará las de un médico especifico.
+- **Servicio: E**ste campo permite que solo se hagan visibles las citas en las que se presta un servicio especifico.   
+- **Sede:** Este campo traerá los registros asociados a una de las sedes registradas en el sistema
+- **Fecha:** El único campo obligatorio para empezar la búsqueda y consultar las citas que estés en el intervalo diligenciado.
+- **Tipo:** En este campo se selecciona el tipo de cita que desea consultar, ya sea presencial, telemedicina o ambas
+- **Estado:** Filtra las citas según su estado, que puede ser activa, cancelada, transferida, asignada, vencida o todas las opciones disponibles
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtrosCitas.webp"
+    alt="Filtros citas"
+    width={800}
+    height={300}
+  />
+</div>
+
+Una vez estén todos los filtros diligenciados correctamente, el sistema mostrara las citas que cumplan con estos parámetros:
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/resultadoFiltroCitas.webp"
+    alt="Resultados de filtros"
+    width={800}
+    height={300}
+  />
+</div>
+
+
+## Descarga de reporte
+
+Dando click en el botón “Descargar reporte”, se generara un archivo CSV con toda la información que esta listada en la tabla de acuerdo a los filtros.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/descargarReporteCita.webp"
+    alt="Descargar reporte"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Menú de acciones
+Al final de cada registro habrá un botón para acceder al menú de acciones para interactuar con cada cita listada.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/menuAccionesCita.webp"
+    alt="Menú de acciones"
+    width={800}
+    height={300}
+  />
+</div>
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/menuAccionesDes.webp"
+    alt="Menú de acciones"
+    width={800}
+    height={300}
+  />
+</div>
+
+### Reagendar cita
+
+Para reagendar una cita debe hacer click en la opción “reagendar”, esto abrirá la ventana “Reagendar cita”.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/reagendar.webp"
+    alt="Opción reagendar"
+    width={800}
+    height={300}
+  />
+</div>
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/formularioReagendar.webp"
+    alt="Formulario para reagendar"
+    width={500}
+    height={300}
+  />
+</div>
+
+En este formulario debe ingresar el intervalo de fechas en la cual quedará reagendada la cita seleccionada, con este dato se listaran las agendas disponibles para mover la cita. Cada registro tendrá un botón “Seleccionar” para pasar a terminar el proceso.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/fechasDisponibles.webp"
+    alt="Fechas disponibles para reagendar"
+    width={500}
+    height={300}
+  />
+</div>
+
+### Transferir cita
+
+Para transferir una cita debe hacer click en la opcion “Transferir”, esto abrirá la ventana “Transferir cita”. En esta ventana se listarán las agendas que tengan el mismo servicio, sede, fecha y hora. Cada registro tendrá un botón “Seleccionar” con el cual se podrá pasar a completar el proceso.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/transferir.webp"
+    alt="Opción transferir cita"
+    width={500}
+    height={300}
+  />
+</div>
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/transferirCita.webp"
+    alt="Opción transferir cita"
+    width={500}
+    height={300}
+  />
+</div>
+
+Una vez seleccionada la agenda destino se abrirá una ventana con la información de la cita actual y la información de como quedará la nueva. Con la información corroborada puede terminar el proceso con el botón “transferir”.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/transferirCita2.webp"
+    alt="Opción transferir cita"
+    width={500}
+    height={300}
+  />
+</div>
+
+### Cancelar cita 
+Para cancelar una cita médica debe hacer click en la opción “Cancelar” del menú de acciones de la cita con la que desea hacer el proceso.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/cancelar.webp"
+    alt="Opción cancelar cita"
+    width={500}
+    height={300}
+  />
+</div>
+
+Se abrirá la ventana de confirmación con la información de la cita médica. Una vez la información es corroborada se puede terminar el proceso de cancelaci’on dando click en el botón “Confirmar”.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/cancelarCita.webp"
+    alt="Opción cancelar cita"
+    width={500}
+    height={300}
+  />
+</div>
+
+### Reenviar webhook
+
+Pueden existir motivos por los cuales una cita no migra correctamente al pasar por el webhook, una vez identificado el motivo y corregida la causa, se utiliza esta opcion del menú de acciones, para pasar la información de la cita médica nuevamente y pueda migrar correctamente. Si el resultado de la migración es correcto, no se podrá reenviar.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/reenviarWebhook.webp"
+    alt="Opción reenviar webhook"
+    width={500}
+    height={300}
+  />
+</div>
+
+### Ver historial de webhooks
+
+Para ver el paso de la información de las citas a través de  los webhooks para comprobar su correcta migración se hace click en la opción “Ver historial de webhooks”.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/verHistorialWebhook.webp"
+    alt="Opción ver historial webhook"
+    width={500}
+    height={300}
+  />
+</div>
+
+Una vez abierta la ventana “Logs webhooks”, podemos ver el listado de los webhooks de las acciones que se han llevado a cabo con la cita seleccionada.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/webhooksAll.webp"
+    alt="Listado webhook"
+    width={500}
+    height={300}
+  />
+</div>
