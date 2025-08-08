@@ -1,0 +1,412 @@
+import { ImageZoom } from 'nextra/components'
+
+# Agenda médicos
+
+Esta opción permite gestionar de manera eficiente las agendas de los médicos en tu empresa prestadora de salud. Con esta herramienta, puedes crear nuevas agendas, visualizar las existentes para coordinar citas, transferir entre médicos según sea necesario y cancelarlas si surge algún imprevisto. Esta funcionalidad te ofrece un control completo sobre la programación de espacios, garantizando una gestión ordenada y efectiva de los horarios médicos.
+
+## Ingreso a la opción
+
+Para acceder a la gestión de agendas, debe hacer clic en la opción “Agendas médicos” en el menú principal del módulo de citas.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/agendaMedicos.webp"
+    alt="Apartado agenda médicos"
+    width={800}
+    height={300}
+  />
+</div>
+
+
+## Apertura de agendas
+
+Dentro de la opción de "Agenda médicos", se encuentra disponible un botón con el texto "Aperturar agenda".  
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/aperturaAgenda.webp"
+    alt="Botón apertura agenda"
+    width={800}
+    height={300}
+  />
+</div>
+
+Al hacer clic en el botón "Aperturar agenda" en la vista principal de la opción, se desplegará la ventana “Apertura agenda médico”
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/ventanaAperturaAgenda.webp"
+    alt="Ventana apertura agenda médico"
+    width={600}
+    height={300}
+  />
+</div>
+
+- **Agenda prioritaria (Switch) :** Campo para seleccionar si la o las agendas nuevas serán prioritarias.
+- **Permitir sobre agendar** **(check):** Con esta opción puede controlar si la agenda nueva podrá quedar a la misma hora y fecha que agendas previamente creadas.
+- **Médico (Obligatorio, campo de búsqueda):** Aquí se debe realizar una búsqueda filtrada por número de documento o nombre para seleccionar al médico encargado de la agenda.
+- **Servicio (Obligatorio, campo de búsqueda):** En este campo, se debe realizar una búsqueda filtrada por código o descripción para seleccionar el servicio correspondiente que se aperturará en la agenda.
+1. Cuando el check de sobre agendamiento no se encuentre marcado solo se podrá hacer selección de un único servicio.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/servicioAgendado.webp"
+    alt="Servicio agendado"
+    width={600}
+    height={300}
+  />
+</div>
+
+2. Cuando el check de sobre agendamiento esté marcado se podrán seleccionar multiples servicios. 
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/sobreagenda.webp"
+    alt="Servicios sobre agendado"
+    width={600}
+    height={300}
+  />
+</div>
+
+- **Tipo de Agenda (Botones, presencial o telemedicina):** Este campo se presenta como botones de selección para elegir entre agenda presencial o telemedicina.
+- **Sede (Obligatorio, campo de búsqueda):** En este campo, se debe realizar una búsqueda filtrada por código o nombre para seleccionar la sede donde se realizará la agenda.
+- **Fecha (Obligatorio):** Se debe ingresar la fecha en la que se realizará la agenda. 
+
+1. Cuando el check de sobre agendamiento no se encuentre marcado, solo se podrá ingresar la fecha de un día especifico. 
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/fechaUnica.webp"
+    alt="Fecha unica"
+    width={600}
+    height={300}
+  />
+</div>
+
+2. Cuando el check de sobre agendamiento se encuentre marcado se podrán seleccionar fecha de inicio y de final, para hacer apertura de agendas en todos los días dentro del intervalo seleccionado.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/fechaIntervalo.webp"
+    alt="Fecha intervalo"
+    width={600}
+    height={300}
+  />
+</div>
+
+- **Duración (Obligatorio, en minutos):** Aquí se debe ingresar la duración de cada cita en la agenda, expresada en minutos.
+- **Horarios (Obligatorio, campo de selección con lista de intervalos dependiendo de la duración):** Se debe seleccionar un intervalo de horario disponible para la agenda, considerando la duración de cada cita. Puede seleccionar uno o varios horarios, depende de la necesidad de apertura:
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/horarios.webp"
+    alt="Horarios"
+    width={600}
+    height={300}
+  />
+</div>
+
+A medida que se seleccionen los horarios se irán agregando a la tabla donde se pude visualizar la fecha y hora, además cuenta con un botón para eliminar la selección en caso de un error al agregar horarios. Una vez se encuentren seleccionados los horarios se habilitará el botón de guarda con el que se podrá terminar el proceso.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/guardarAgenda.webp"
+    alt="guardar agenda"
+    width={600}
+    height={300}
+  />
+</div>
+
+## Visualización de agendas
+
+Para la visualización y gestión de las agendas se cuenta con diferentes filtros según las necesidades, estos son:
+
+- **Médico:** Permite buscar agendas asociadas a un médico específico utilizando su número de documento o nombre como criterio de búsqueda.
+- **Servicio:** Filtra las agendas según el código o descripción del servicio al que están asignadas.
+- **Sedes:** Permite buscar agendas asociadas a una sede específica utilizando su código o nombre como criterio de búsqueda.
+- **Fecha:** Selecciona un intervalo de fechas para mostrar las agendas programadas dentro de ese período.
+- **Tipo:** Permite seleccionar el tipo de agenda, ya sea presencial o telemedicina.
+- **Estado:** Filtra las agendas según su estado, que puede ser activa, cancelada, transferida, asignada, vencida o todas las opciones disponibles.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/filtrosVisualizacionAgendas.webp"
+    alt="Filtros visualización"
+    width={800}
+    height={300}
+  />
+</div>
+
+A partir de la información cargada en los filtros, se dispone de dos modalidades para la visualización de las agendas de consultadas:
+
+1. **Visualización en calendario:** La funcionalidad de visualización en calendario ofrece a los usuarios un enfoque intuitivo y eficiente para acceder a las agendas de consultas. Mediante un calendario que muestra los días de una semana seleccionable, los usuarios pueden navegar fácilmente entre las fechas para observar las agendas programadas por día. 
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/calendarioAgendas.webp"
+    alt="Calendario agenda"
+    width={800}
+    height={300}
+  />
+</div>
+Para diferenciar las agendas, visualmente se han asignado color diferente según el estado.
+
+---
+
+Para interactuar con una agenda puede dar clic sobre la previsualización de cada agenda ubicada en el calendario. Esto abrirá un recuadro con la información detallada y las acciones disponibles para esta, en donde podrá bloquear **cancelar** o **transferir l**a agenda de acuerdo a la necesidad:
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/previsualizacionAgenda.webp"
+    alt="Previsualizacion agenda "
+    width={800}
+    height={300}
+  />
+</div>
+
+Para ver todas las agendas de un día del calendario haga clic en el botón “más”, posteriormente seleccione una de estas para ver información detallada y realizar las acciones disponibles.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/agendaDia.webp"
+    alt="Previsualizacion agenda"
+    width={800}
+    height={300}
+  />
+</div>
+
+---
+2. **Visualización en tabla:** La función de visualización en tabla ofrece una lista organizada y detallada de las agendas de consultas que cumplen con los filtros seleccionados. 
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/viewTabla.webp"
+    alt="Visualisación tabla"
+    width={800}
+    height={300}
+  />
+</div>
+Para visualizar la información detallada de una agenda haga clic en el icono “ver detalle”, donde podrá además realizar cualquiera de las acciones disponibles.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/detalleCita.webp"
+    alt="Detalles de la cita"
+    width={800}
+    height={300}
+  />
+</div>
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/detalleAgenda.webp"
+    alt="Detalles de la agenda"
+    width={800}
+    height={300}
+  />
+</div>
+
+## Acciones sobre múltiples agendas
+
+La vista de agendas en tabla tiene la funcionalidad para interactuar con múltiples agendas seleccionadas al mismo tiempo, para esto se dispone de botones de acción en la parte derecha sobre la tabla, junto con los checks de selección dispuestos al final de cada fila y el check de seleccionar todos, ubicado al final de los encabezados de la tabla.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/botonesAccion.webp"
+    alt="Botones de acción"
+    width={800}
+    height={300}
+  />
+</div>
+Los botones de acción se habilitaran en función del estado de las agendas seleccionadas.
+
+## Transferir agendas
+
+Esta acción permite transferir un espacio agendado entre profesionales y las sedes en donde se dará la atención al usuario.
+
+1. **Transferir agenda seleccionada:** Una vez en la ventana “Detalle de la agenda”, si la agenda se encuentra abierta, estará disponible un botón “Transferir”.
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/transferirAgenda.webp"
+    alt="Transferir agenda"
+    width={800}
+    height={300}
+  />
+</div>
+
+Al hacer clic en el botón transferir se abrirá la ventana “Transferir agenda”, en la cual se tendrá toda la información de la agenda y los campos obligatorios para gestionar la transferencia.
+- **Permitir sobre agendar (chek)**: Con este campo se puede controlar si la agenda destino puede quedar en el mismo horario que una agenda previamente creada.
+- **Fecha (Obligatorio):** Campo para ingresar la fecha a la cual será trasladada la agenda.
+- **Médico (Obligatorio, campo de búsqueda):** Aquí se debe realizar una búsqueda filtrada por número de documento o nombre para seleccionar al médico al cual se le transferirá la agenda.}
+- **Sede (Obligatorio, campo de búsqueda):** En este campo, se debe realizar una búsqueda filtrada por código o nombre para seleccionar la sede donde se re asignará la agenda.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/transferirAgenda2.webp"
+    alt="Transferir agenda"
+    width={600}
+    height={300}
+  />
+</div>
+
+2.  **Transferir múltiples agendas:** en la vista principal de la opción se encuentra el botón “transferir agenda”
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/transferirMultiplesAgendas.webp"
+    alt="Transferir multiples agendas"
+    width={800}
+    height={300}
+  />
+</div>
+
+Al hacer clic en este botón se abrirá la ventana “Transferir agenda”.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/transferirMultiplesAgendas2.webp"
+    alt="Transferir multiples agendas"
+    width={600}
+    height={300}
+  />
+</div>
+
+- **Permitir sobre agendar (check):** Con este campo se puede controlar si la agenda destino puede quedar en el mismo horario que una agenda previamente creada.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/permitirSobreagenda.webp"
+    alt="permitir sobreagendar"
+    width={600}
+    height={300}
+  />
+</div>
+
+- **Fecha:** Campo para ingresar el día en en que se encuentran las agendas a transferir.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/fecha.webp"
+    alt="Fecha agenda"
+    width={400}
+    height={300}
+  />
+</div>
+
+- **Médico:** Campo que permite buscar por documento o nombre el doctor que se encuentra vinculado actualmente a las agendas. 
+
+<br/>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/campoMedico.webp"
+    alt="Campo médico"
+    width={800}
+    height={300}
+  />
+</div>
+
+- **Tipo de agenda:** Botones para la selección del tipo de las agendas.
+
+<br/>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/tipoAgenda.webp"
+    alt="Tipo de agenda"
+    width={800}
+    height={300}
+  />
+</div>
+
+- **Sede:** Este campo permite la búsqueda por código o nombre de la sede donde se encuentran abiertas las agendas. 
+
+<br/>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/sedeAgenda.webp"
+    alt="Sede de agenda"
+    width={800}
+    height={300}
+  />
+</div>
+
+- Una vez llenos los filtros para consultar las agendas que se desean transferir, los resultados se listaran en la tabla. Donde cada uno de los registros, en el extremo derecho tendrá un campo de selección para escoger las agendas a transferir. También puede seleccionar todas las filas con el check de seleccionar todos ubicado en la parte derecha de los encabezados de la tabla.
+<br/>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/resultadosAgenda.webp"
+    alt="Resultados del filtro"
+    width={600}
+    height={300}
+  />
+</div>
+
+- Una vez llenos seleccionadas las agendas necesarias, se busca la información de la agenda destino, fecha, doctor y sede. con toda la información diligenciada, finalmente se puede hacer clic sobre el botón “Transferir agenda” para terminar el proceso.
+
+<br/>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/transferirAgendas.webp"
+    alt="Transferencia de agendas"
+    width={600}
+    height={300}
+  />
+</div>
+
+## Cancelar agenda
+
+Una vez seleccionado el espacio y abierta la ventana “Detalle de la agenda”, si esta está aun disponible, habrá un botón “cancelar”.
+
+<br/>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/cancelarAgenda.webp"
+    alt="Cancelar agenda"
+    width={600}
+    height={300}
+  />
+</div>
+
+## Bloqueo y desbloqueo de agenda
+
+- **Bloqueo:** Una vez seleccionado el espacio y abierta la ventana “Detalle de la agenda”, si esta está aun disponible, habrá un botón “bloquear”. Con este botón la agenda quedará inaccesible no se podrá realizar ninguna acción sobre esta hasta que se desbloquee.
+<br/>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/bloqueoAgenda.webp"
+    alt="Bloqueo de agenda"
+    width={600}
+    height={300}
+  />
+</div>
+    
+- **Desbloqueo:** Una vez seleccionado el espacio y abierta la ventana “Detalle de la agenda”, si esta está bloqueada habrá un botón “desbloquear”. De esta manera la agenda quedará nuevamente activa y ahora se podrán realizar acciones sobre esta.
+<br/>
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/desbloqueoAgenda.webp"
+    alt="Desbloqueo de agenda"
+    width={600}
+    height={300}
+  />
+</div>
