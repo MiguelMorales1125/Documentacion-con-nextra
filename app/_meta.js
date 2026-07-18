@@ -3,6 +3,11 @@
 // This file is used to define metadata for the Nextra   documentation site.
 
 const myObject = {
+  progreso: {
+    title: "Progreso",
+    type: "page",
+    display: "hidden",
+  },
   inicio: {
     title: "Introducción",
     type: "page",
