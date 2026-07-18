@@ -1,0 +1,87 @@
+---
+description: Guía para capturas de pantalla al documentar módulos en Nextra (estilo Notion)
+globs: app/**/*.mdx,scripts/capture*.mjs,scripts/*screenshot*
+alwaysApply: false
+---
+
+# Capturas de documentación (estilo Notion)
+
+Al documentar una sección o módulo nuevo, leer primero el `.md` equivalente en `docu-notion/` para la estructura de secciones. La app manda sobre Notion en contenido; las capturas siguen el patrón visual de Notion.
+
+## Antes de capturar
+
+1. Navegar la pantalla en QA y verificar que el texto del `.mdx` coincide con la UI.
+2. Definir una captura **por sección** del `.mdx` (nunca reutilizar la misma imagen en dos secciones).
+3. Guardar en `public/screenshots/[modulo]/` con nombre descriptivo: `[recurso]-[NN]-[seccion].png`.
+3b. **Jerarquía:** la carpeta del `.mdx` se deduce del sidebar de QA (captura de ingreso), no se inventa. Grupo del menú = carpeta padre (`configuracion/`, `seguridad/`, …). Ver comando `/document` Paso 0.
+4. **Cerrar modales, drawers y paneles** abiertos antes de cada captura que no documente ese overlay (usar **Cancelar** o **Cerrar**; en esta app Escape no cierra los modales Headless UI).
+5. **Esperar loaders** antes de capturar:
+   - Loader global `[role=status][aria-label="Loading..."]` oculto.
+   - Tras abrir **modales de editar/crear** con datos: esperar a que desaparezca el spinner del dialog y a que los campos tengan valor (no capturar el ícono de carga a media pantalla).
+6. **Acciones en tablas** (editar, switch): hacer scroll horizontal hasta la columna **Acción**, recortar Estado + Acción (no `main` completo) y resaltar el ícono lápiz o el switch — nunca el primer `svg` de la fila si hay columnas con copiar/portapapeles. Si el outline no se ve en un `svg` o en un `role=switch`, resaltar el **contenedor padre**.
+7. **Menús con opciones parecidas** (Activar / Desactivar, etc.): resaltar con coincidencia **exacta** del texto (`/^Activar…$/` o `getByRole('menuitem', { name })`). Nunca un regex que pueda coincidir con un substring de otra opción (p. ej. `/Activar/i` también pega en **Desactivar**).
+7. **Verificar cada captura** con `Read` del PNG **antes** de darla por buena: el recuadro rojo debe rodear **exactamente** el control que nombra el párrafo; sin loader, sin modal ajeno, sin opción equivocada del menú.
+8. **Cobertura:** al documentar una pantalla completa, el inventario de QA (incl. cada ícono de Acciones, menú ⋮, pestañas de modales, switches de columna) debe mapearse a secciones del `.mdx`. Ver comando `/document` Paso 2 y 6.
+
+## Tipos de captura (según lo que documentes)
+
+| Sección | Encuadre | Recuadro rojo |
+|---------|----------|---------------|
+| **Ingreso a la opción (menú)** | Ver sección siguiente | Ítem hoja (+ opcional el grupo padre) |
+| Botón Nuevo / Descargar | Header de la página | El botón |
+| Formulario crear/editar | Modal o panel del formulario | Campo que se explica en ese párrafo |
+| Buscar | Zona de filtros superior | Input Buscar |
+| Filtro Estado / Ordenar | Zona de filtros | Dropdown abierto o cerrado según el texto |
+| Tabla de resultados | Tabla con encabezados visibles | Sin recuadro (contexto completo) |
+| Editar registro | Fila / columnas Acción | Ícono lápiz (padre del svg si hace falta) |
+| Histórico / lista / detalle | Fila / columnas Acción | Ícono correspondiente |
+| Cambiar estado | Columna acción | Switch de estado de la fila |
+| Switch en otra columna (ej. Auto agendamiento) | Esa columna + Acción si aporta contexto | El switch de esa columna |
+| Liberar / acción secundaria | Fila o modal | Botón o switch señalado |
+| Modal con pestañas | Panel del modal; una captura por pestaña si el texto las explica | Pestaña o título según el párrafo |
+| Flujo paso a paso (kiosk) | Solo el paso actual, sin sidebar admin | Control principal del paso |
+| Vista pública (Turnos) | Pantalla de visualización | Sin sidebar |
+
+## Captura de ingreso (sidebar) — estilo obligatorio
+
+La primera captura de cada opción debe dejar claro **dónde vive** en el menú. Estilo de referencia: menú lateral completo a la izquierda, pantalla a la derecha, y la ruta del menú identificada en rojo (como en las capturas Notion de Citas).
+
+1. **Sidebar completo**: logo, todos los ítems de primer nivel (Principal, Agendar…, Configuración, etc.) y el grupo padre **expandido**. Nunca un recorte mínimo solo del subítem.
+2. **Grupo padre abierto**: Configuración / Seguridad / Reportes / etc. debe verse desplegado con sus hijos.
+3. **Identificar la ruta en rojo** (obligatorio en la hoja; recomendado en el padre):
+   - Recuadro `#e03e3e`, `3px`, `outline-offset: 4px` en el **submódulo** documentado.
+   - Mismo recuadro en el **grupo padre** (Configuración, etc.) para leer (1) grupo → (2) hoja.
+   - Alternativa válida: números/marcadores rojos `(1)` `(2)` sobre padre y hoja, si se anotan a mano.
+4. **Encuadre preferido**:
+   - Ideal: `aside` completo + inicio del `main` (título / botón Nuevo a la derecha).
+   - Mínimo aceptable: `aside` de arriba abajo, sin cortar logo ni el final del menú expandido.
+5. **Verificar** con `Read` del PNG: se entiende la jerarquía del menú sin leer el MDX.
+
+## Reglas del recuadro rojo
+
+- Color: `#e03e3e`, grosor `3px`, `outline-offset: 4px`.
+- En el resto de secciones: **un** recuadro por imagen.
+- Excepción **ingreso**: hasta dos recuadros (padre + hoja).
+- No usar `fullPage: true` salvo que el menú no quepa en el viewport; en ese caso priorizar que se vean padre expandido + hoja.
+
+## Herramienta
+
+Usar `scripts/capture-doc-screenshot.mjs` (login, resaltar, recorte). Ejemplo:
+
+```bash
+node scripts/capture-doc-screenshot.mjs --viewer --route /digiturno/configuracion/modulos-atencion --highlight "button >> text=/Nuevo/" --crop main --out public/screenshots/moduloDigiturno/modulos-atencion-02-nuevo.png
+```
+
+## Formato en `.mdx`
+
+Seguir el patrón existente: `ImageZoom` dentro de `contenedor-imagenes`, una imagen distinta por `##` o subsección relevante.
+
+## Revisión final obligatoria (imagen ↔ texto)
+
+Antes de cerrar `/document` o cualquier tanda de capturas, recorrer **cada** `##` del `.mdx`:
+
+1. Abrir el PNG con `Read` (visión).
+2. Comprobar que lo marcado en rojo es lo que el párrafo explica (misma opción de menú, mismo botón, mismo campo).
+3. Rechazar y recapturar si hay: loader/spinner, opción hermana remarcada (Activar vs Desactivar), modal abierto en sección que no lo documenta, o texto del MDX que no coincide con labels de QA.
+
+No entregar el resultado final sin esta pasada.

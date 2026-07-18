@@ -1,0 +1,166 @@
+---
+title: "CIE"
+description: "Gestión de códigos de la Clasificación Internacional de Enfermedades"
+---
+
+import { ImageZoom } from 'nextra/components'
+
+# CIE
+
+En esta opción se administran los códigos de la **Clasificación Internacional de Enfermedades (CIE)**, usados para registrar y categorizar diagnósticos en las historias clínicas.
+
+## Ingreso a la opción
+
+1. Ingrese al módulo **Historias clínicas**.
+2. En el menú lateral, despliegue **Configuración**.
+3. Seleccione **CIE**.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/cie-01-ingreso.png"
+    alt="Ingreso a CIE desde Configuración"
+    width={800}
+    height={450}
+  />
+</div>
+
+## Crear CIE
+
+Dentro de la opción se encuentra el botón **Nuevo CIE**.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/cie-02-nuevo.png"
+    alt="Botón Nuevo CIE"
+    width={800}
+    height={450}
+  />
+</div>
+
+Al hacer clic en **Nuevo CIE**, se abre el formulario con los siguientes campos:
+
+- **Código** (obligatorio, único): identifica el diagnóstico. No se puede repetir.
+- **Descripción** (obligatorio): nombre o detalle del código CIE.
+- **Sexo** (campo de selección, obligatorio): **Todos**, **Hombres** o **Mujeres**.
+- **Edad mínima** (obligatorio): edad a partir de la cual aplica el código.
+- **Edad máxima** (obligatorio): edad hasta la cual aplica el código.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/cie-03-formulario.png"
+    alt="Formulario crear CIE"
+    width={700}
+    height={450}
+  />
+</div>
+
+## Buscar CIE
+
+El campo **Buscar** permite localizar códigos por **código** o **descripción**.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/cie-04-buscar.png"
+    alt="Buscar CIE"
+    width={800}
+    height={450}
+  />
+</div>
+
+### Filtros
+
+Además, se pueden aplicar los siguientes filtros:
+
+- **Estado**: Todos, activo o inactivo.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/cie-05-filtro-estado.png"
+    alt="Filtro por estado"
+    width={800}
+    height={450}
+  />
+</div>
+
+- **Ordenar por**: más reciente o más antiguo.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/cie-06-filtro-ordenar.png"
+    alt="Filtro ordenar por"
+    width={800}
+    height={450}
+  />
+</div>
+
+Los resultados se muestran en la tabla principal, con columnas de código, descripción, sexo, edades, estado y fecha de creación.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/cie-07-tabla.png"
+    alt="Tabla de códigos CIE"
+    width={800}
+    height={450}
+  />
+</div>
+
+## Editar CIE
+
+En la columna **Acción**, al extremo derecho de cada fila, use el ícono de lápiz para editar el registro.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/cie-08-editar.png"
+    alt="Botón editar CIE"
+    width={700}
+    height={300}
+  />
+</div>
+
+Al hacer clic, se abre el formulario con los datos del código. En edición, el campo **Código** no se puede modificar; sí puede actualizar descripción, sexo y rangos de edad.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/cie-09-formulario-editar.png"
+    alt="Formulario editar CIE"
+    width={700}
+    height={450}
+  />
+</div>
+
+## Cambiar estado de un CIE
+
+En la columna **Acción** también está el interruptor (switch). La posición derecha (verde) indica activo y la izquierda (rojo) inactivo.
+
+**Activo:**
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/cie-10-estado-activo.png"
+    alt="CIE activo"
+    width={700}
+    height={300}
+  />
+</div>
+
+**Inactivo:**
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/cie-11-estado-inactivo.png"
+    alt="CIE inactivo"
+    width={700}
+    height={300}
+  />
+</div>

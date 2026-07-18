@@ -1,0 +1,369 @@
+---
+title: "Pacientes"
+description: "Administre la ficha de pacientes: datos, estado, auto agendamiento e historiales"
+---
+
+import { ImageZoom } from 'nextra/components'
+
+# Pacientes
+
+Use esta opción para **crear y mantener la ficha de cada paciente** (datos personales, contacto y afiliación). Esa información es la base para citas, digiturno e historias clínicas: lo que registre aquí se reutiliza en los módulos que compartan pacientes.
+
+## Ingreso a la opción
+
+1. Ingrese al módulo **Historias clínicas**.
+2. En el menú lateral, despliegue **Configuración**.
+3. Seleccione **Pacientes**.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-01-ingreso.png"
+    alt="Ingreso a Pacientes desde Configuración"
+    width={800}
+    height={450}
+  />
+</div>
+
+## Crear paciente
+
+Sirve para **dar de alta un paciente nuevo** con sus datos de identificación, contacto y afiliación, de modo que pueda usarse al agendar o atender.
+
+Dentro de la opción se encuentra el botón **Nuevo paciente**.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-02-nuevo.png"
+    alt="Botón Nuevo paciente"
+    width={800}
+    height={450}
+  />
+</div>
+
+Al hacer clic en **Nuevo paciente**, se abre el formulario **Crear o actualizar un paciente** con los siguientes campos (los marcados con * son obligatorios en pantalla):
+
+- **Tipo de documento** *
+- **Número de identificación** *
+- **Primer nombre** *
+- **Segundo nombre**
+- **Primer apellido** *
+- **Segundo apellido**
+- **RH**
+- **Sexo** *
+- **Estado civil**
+- **Identidad de género** *
+- **Grupo étnico** *
+- **Fecha de nacimiento** * (formato AAAA-MM-DD); **Edad** se calcula a partir de la fecha
+- **Régimen** *
+- **Nivel** *
+- **Tipo de afiliación** *
+- **Documento del cotizante**
+- **Ciudad de residencia** * (búsqueda)
+- **Nacionalidad** * (búsqueda)
+- **Nivel académico** *
+- **Teléfono** *
+- **Teléfono secundario**
+- **Correo electrónico** *
+- **Dirección**
+- **Zona**
+- **Entidad afiliadora** (búsqueda)
+- **Contrato** (búsqueda)
+- **Ocupación** (búsqueda)
+- **Novedades**
+- **Tipo de discapacidad**
+- **Sentencias judiciales**
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-03-formulario.png"
+    alt="Formulario crear paciente"
+    width={700}
+    height={450}
+  />
+</div>
+
+## Importar pacientes
+
+Sirve para **cargar muchos pacientes de una sola vez** desde un archivo CSV, en lugar de crearlos uno por uno.
+
+Junto a **Nuevo paciente** está el menú de opciones (ícono de tres puntos). Al abrirlo encontrará **Importar desde csv**.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-04-opciones.png"
+    alt="Botón de opciones"
+    width={800}
+    height={450}
+  />
+</div>
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-05-menu-importar.png"
+    alt="Opción Importar desde csv"
+    width={700}
+    height={350}
+  />
+</div>
+
+Al seleccionarla se abre **Importar archivo CSV de pacientes**. Use la zona de carga o el botón **Importar**, revise la advertencia (el CSV debe ir delimitado por coma) y, si lo necesita, consulte la **Estructura** antes de pulsar **Subir archivo**.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-06-importar-modal.png"
+    alt="Modal importar CSV de pacientes"
+    width={700}
+    height={450}
+  />
+</div>
+
+## Desactivar pacientes por entidad afiliadora
+
+Sirve para **dejar inactivos (o sin auto agendamiento) a todos los pacientes de una misma entidad afiliadora**, por ejemplo cuando una EPS deja de operar con la institución.
+
+En el menú de opciones seleccione **Desactivar masivo por entidad afiliadora**.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-07-menu-desactivar.png"
+    alt="Opción desactivar masivo"
+    width={700}
+    height={350}
+  />
+</div>
+
+Se abre la ventana **Desactivar pacientes masivos por entidad afiliadora**. Puede marcar **Desactivar estado** y/o **Inhabilitar auto agendamiento**, busque la **Entidad afiliadora** y pulse **Confirmar**.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-08-desactivar-modal.png"
+    alt="Modal desactivar masivo por entidad afiliadora"
+    width={700}
+    height={450}
+  />
+</div>
+
+## Activar pacientes por entidad afiliadora
+
+Sirve para **volver a activar de forma masiva** a los pacientes asociados a una entidad afiliadora (y habilitarles el auto agendamiento en ese proceso).
+
+También desde el menú de opciones puede usar **Activar masivo por entidad afiliadora**: seleccione la entidad y confirme.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-09-menu-activar.png"
+    alt="Opción activar masivo"
+    width={700}
+    height={350}
+  />
+</div>
+
+## Buscar paciente
+
+Sirve para **encontrar rápido un paciente** en el listado y aplicar filtros antes de editarlo o consultar su historial.
+
+El campo **Buscar** permite localizar pacientes por **número de documento** o **nombres**.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-10-buscar.png"
+    alt="Buscar paciente"
+    width={800}
+    height={450}
+  />
+</div>
+
+### Filtros
+
+Además, puede aplicar:
+
+- **Estado**: Todos, activo o inactivo.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-11-filtro-estado.png"
+    alt="Filtro por estado"
+    width={800}
+    height={450}
+  />
+</div>
+
+- **Ordenar por**: más reciente o más antiguo.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-12-filtro-ordenar.png"
+    alt="Filtro ordenar por"
+    width={800}
+    height={450}
+  />
+</div>
+
+- **Entidad afiliadora**: busque y filtre por la entidad del paciente.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-13-filtro-entidad.png"
+    alt="Filtro entidad afiliadora"
+    width={800}
+    height={450}
+  />
+</div>
+
+Los resultados se muestran en la tabla, con columnas como nombre, documento, teléfono, sexo, aseguradora, régimen, estado, creado, auto agendamiento y acciones.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-14-tabla.png"
+    alt="Tabla de pacientes"
+    width={800}
+    height={450}
+  />
+</div>
+
+## Editar paciente
+
+Sirve para **corregir o actualizar** los datos de un paciente ya creado (documento, nombres, contacto, afiliación, etc.).
+
+En la columna **Acciones**, use el ícono de lápiz para editar el registro.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-15-editar.png"
+    alt="Botón editar paciente"
+    width={700}
+    height={300}
+  />
+</div>
+
+Al hacer clic se abre el mismo formulario con los datos del paciente para actualizarlos.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-16-formulario-editar.png"
+    alt="Formulario editar paciente"
+    width={700}
+    height={450}
+  />
+</div>
+
+## Consultar histórico
+
+Sirve para **revisar el pasado del paciente** sin salir de esta pantalla: citas, sanciones (bloqueos de agenda) y cambios registrados sobre su ficha. El tooltip del ícono indica **Historiales**.
+
+En la columna **Acciones**, al lado del lápiz de editar, use el ícono de lista para abrir el **Histórico** del paciente.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-19-historico.png"
+    alt="Botón histórico del paciente"
+    width={700}
+    height={300}
+  />
+</div>
+
+Se abre la ventana **Histórico**, con tres pestañas:
+
+### Histórico de citas médicas
+
+Lista las **citas** asociadas al paciente (fecha, médico, tipo de atención, operador, estado, origen). Puede **Filtrar por estado** (por ejemplo Todos).
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-20-historico-detalle.png"
+    alt="Histórico de citas médicas"
+    width={800}
+    height={450}
+  />
+</div>
+
+### Histórico de sanciones
+
+Muestra las **sanciones o bloqueos de agenda** del paciente (servicio, inicio y fin, estado, fechas, quién liberó y acciones disponibles).
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-22-historico-tab.png"
+    alt="Histórico de sanciones"
+    width={800}
+    height={450}
+  />
+</div>
+
+### Histórico de actualizaciones
+
+Es el **registro de auditoría** de la ficha: qué se cambió, cuándo y qué operador lo hizo (acción, descripción, fecha y operador).
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-23-historico-tab.png"
+    alt="Histórico de actualizaciones"
+    width={800}
+    height={450}
+  />
+</div>
+
+## Cambiar estado de un paciente
+
+Sirve para **activar o desactivar** al paciente en el sistema. Un paciente inactivo no se usa con normalidad en los flujos operativos; al desactivarlo también se apaga su auto agendamiento.
+
+En la columna **Acciones** está el interruptor (switch) de estado. La posición derecha (verde) indica activo y la izquierda (rojo) inactivo.
+
+**Activo:**
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-17-estado-activo.png"
+    alt="Paciente activo"
+    width={700}
+    height={300}
+  />
+</div>
+
+**Inactivo:**
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-18-estado-inactivo.png"
+    alt="Paciente inactivo"
+    width={700}
+    height={300}
+  />
+</div>
+
+## Auto agendamiento
+
+Sirve para permitir o impedir que el paciente **agende citas por sí mismo** (por ejemplo desde canales de autoagendamiento). Verde = permitido; apagado = no puede autoagendarse, aunque siga activo en el listado.
+
+En la columna **Auto agendamiento** use el interruptor de esa columna.
+
+<br />
+<div className="contenedor-imagenes">
+  <ImageZoom
+    src="/screenshots/moduloHistoriasClinicas/pacientes-24-auto-agendamiento.png"
+    alt="Switch de auto agendamiento"
+    width={700}
+    height={300}
+  />
+</div>
